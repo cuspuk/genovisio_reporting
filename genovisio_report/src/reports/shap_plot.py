@@ -50,56 +50,48 @@ class ShapData:
 
     @property
     def hovertext(self) -> str:
-        return f"<b><i>{self.label}</i></b><br><b>value:</b> {self.value}<br><b>SHAP value:</b> {self.shap}"
+        return f"<b><i>{self.name}</i></b><br><b>value:</b> {self.value}<br><b>SHAP value:</b> {self.shap}"
 
 
 def generate_plot_as_json(isv: input_schemas.ISVResult, annotation: input_schemas.Annotation) -> str:
     data = [
         ShapData(
-            "disease_associated_genes",
+            "Disease associated Genes",
             isv.isv_shap_values.disease_associated_genes,
             annotation.counters.disease_associated_genes,
         ),
-        ShapData("gencode_genes", isv.isv_shap_values.gencode_genes, annotation.counters.gencode_genes),
-        ShapData("hi_genes", isv.isv_shap_values.hi_genes, annotation.counters.hi_genes),
-        ShapData("lncrna", isv.isv_shap_values.lncrna, annotation.counters.lncrna),
-        ShapData("mirna", isv.isv_shap_values.mirna, annotation.counters.mirna),
-        ShapData("morbid_genes", isv.isv_shap_values.morbid_genes, annotation.counters.morbid_genes),
-        ShapData("protein_coding", isv.isv_shap_values.protein_coding, annotation.counters.protein_coding),
-        ShapData("pseudogenes", isv.isv_shap_values.pseudogenes, annotation.counters.pseudogenes),
-        ShapData("regions_HI", isv.isv_shap_values.regions_HI, annotation.counters.regions_HI),
-        ShapData("regions_TS", isv.isv_shap_values.regions_TS, annotation.counters.regions_TS),
-        ShapData("regulatory", isv.isv_shap_values.regulatory, annotation.counters.regulatory),
+        ShapData("Overlapped Gencode Elements", isv.isv_shap_values.gencode_genes, annotation.counters.gencode_genes),
+        ShapData("Haploinsufficient Genes", isv.isv_shap_values.hi_genes, annotation.counters.hi_genes),
+        ShapData("Long non-coding RNA", isv.isv_shap_values.lncrna, annotation.counters.lncrna),
+        ShapData("Micro RNA", isv.isv_shap_values.mirna, annotation.counters.mirna),
+        ShapData("Morbid Genes", isv.isv_shap_values.morbid_genes, annotation.counters.morbid_genes),
+        ShapData("Protein Coding Genes", isv.isv_shap_values.protein_coding, annotation.counters.protein_coding),
+        ShapData("Pseudogenes", isv.isv_shap_values.pseudogenes, annotation.counters.pseudogenes),
+        ShapData("Haploinsufficient Regions", isv.isv_shap_values.regions_HI, annotation.counters.regions_HI),
+        ShapData("Triplosensitive Regions", isv.isv_shap_values.regions_TS, annotation.counters.regions_TS),
+        ShapData("Regulatory Elements", isv.isv_shap_values.regulatory, annotation.counters.regulatory),
         ShapData(
-            "regulatory_DNase_I_hypersensitive_site",
+            "DNase I hypersensitive sites",
             isv.isv_shap_values.regulatory_DNase_I_hypersensitive_site,
             annotation.counters.regulatory_DNase_I_hypersensitive_site,
         ),
+        ShapData("TATA box", isv.isv_shap_values.regulatory_TATA_box, annotation.counters.regulatory_TATA_box),
+        ShapData("Enhancers", isv.isv_shap_values.regulatory_enhancer, annotation.counters.regulatory_enhancer),
         ShapData(
-            "regulatory_TATA_box", isv.isv_shap_values.regulatory_TATA_box, annotation.counters.regulatory_TATA_box
-        ),
-        ShapData(
-            "regulatory_enhancer", isv.isv_shap_values.regulatory_enhancer, annotation.counters.regulatory_enhancer
-        ),
-        ShapData(
-            "regulatory_enhancer_blocking_element",
+            "Enhancer-blocking Elements",
             isv.isv_shap_values.regulatory_enhancer_blocking_element,
             annotation.counters.regulatory_enhancer_blocking_element,
         ),
+        ShapData("Promoters", isv.isv_shap_values.regulatory_promoter, annotation.counters.regulatory_promoter),
+        ShapData("Silencers", isv.isv_shap_values.regulatory_silencer, annotation.counters.regulatory_silencer),
         ShapData(
-            "regulatory_promoter", isv.isv_shap_values.regulatory_promoter, annotation.counters.regulatory_promoter
-        ),
-        ShapData(
-            "regulatory_silencer", isv.isv_shap_values.regulatory_silencer, annotation.counters.regulatory_silencer
-        ),
-        ShapData(
-            "regulatory_transcriptional_cis_regulatory_region",
+            "Transcriptional cis-regulatory Regions",
             isv.isv_shap_values.regulatory_transcriptional_cis_regulatory_region,
             annotation.counters.regulatory_transcriptional_cis_regulatory_region,
         ),
-        ShapData("rrna", isv.isv_shap_values.rrna, annotation.counters.rrna),
-        ShapData("snrna", isv.isv_shap_values.snrna, annotation.counters.snrna),
-        ShapData("ts_genes", isv.isv_shap_values.ts_genes, annotation.counters.ts_genes),
+        ShapData("Ribosomal RNA", isv.isv_shap_values.rrna, annotation.counters.rrna),
+        ShapData("Small nuclear RNA", isv.isv_shap_values.snrna, annotation.counters.snrna),
+        ShapData("Triplosensitivity Genes", isv.isv_shap_values.ts_genes, annotation.counters.ts_genes),
     ]
 
     # sort data by name in reverse order
