@@ -1,0 +1,3853 @@
+{
+  "Benign_CNV": [
+    {
+      "_id": "66c0b3c38af34b22bfabfa95",
+      "chromosome": "chr16",
+      "start": 34454602,
+      "end": 34454749,
+      "variantaccession": "nsv3342300",
+      "varianttype": "CNV",
+      "variantsubtype": "deletion",
+      "reference": "Audano_et_al_2019",
+      "pubmedid": 30661756,
+      "method": "Sequencing",
+      "supportingvariants": "nssv14582143",
+      "mergedorsample": "M",
+      "samplesize": 14,
+      "observedgains": 0.0,
+      "observedlosses": 1.0,
+      "samples": "HG02106",
+      "cnv_type": "loss",
+
+      "chrom_position": "16q24.3",
+      "classification": "Likely pathogenic"
+    }
+  ],
+  "Predictions": {
+    "MarCNV": {
+      "score": 0.5
+    },
+    "ISV": {
+      "score": 1.0
+    },
+    "Hybrid": {
+      "score": 0.75
+    }
+  },
+  "ACMG": {
+    "Section_1": {
+      "1A": {
+        "Description": "Contains protein-coding or other known functionally important elements",
+        "Score": 0.1
+      }
+    },
+    "Section_2": {
+      "2A": {
+        "Description": "Complete overlap; the TS gene or minimal critical region is fully contained within the observed copy number gain",
+        "Score": 1.0
+      }
+    },
+    "Section_3": {
+      "3C": {
+        "Description": "50 or more genes",
+        "Score": 0.9
+      }
+    },
+    "Section_4": {
+      "Other": {
+        "Description": [
+          "No known fully overlapping population variant",
+          "No Benign Gains fully overlapping (including LB)",
+          "33 Pathogenic Gains fully contained (including LP)"
+        ],
+        "Score": 0.5
+      }
+    },
+    "Section_5": {
+      "Other": {
+        "Description": "No data available"
+      }
+    }
+  },
+  "Regulatory": [
+    {
+      "_id": "66c0b74f2c0c857ee899aa74",
+      "id": "ENSR00000536193",
+      "source": "Ensembl_Ensembl",
+      "type": "enhancer",
+      "chromosome": "chr16",
+      "start": 34412201,
+      "end": 34412800,
+      "ensembl_data": {
+        "score": 0,
+        "strand": "",
+        "ID": "ENSR00000536193",
+        "extended_start": "34412201",
+        "extended_end": "34412800",
+        "color": "#faca00"
+      }
+    },
+    {
+      "_id": "66c0b6c02c0c857ee891f39c",
+      "id": "NG_149195.1",
+      "name": "NG_149195",
+      "source": "NCBI",
+      "type": "",
+      "chromosome": "chr16",
+      "start": 34450011,
+      "end": 34450721,
+      "annotations": {
+        "date": "01-APR-2023",
+        "accessions": ["NG_149195"],
+        "references": [
+          {
+            "title": "Functional Dissection of the Enhancer Repertoire in Human Embryonic Stem Cells",
+            "authors": "Barakat TS, Halbritter F, Zhang M, Rendeiro AF, Perenthaler E, Bock C and Chambers I.",
+            "pubmed_id": "30033119",
+            "comment": "",
+            "journal": "Cell Stem Cell 23 (2), 276-288 (2018)"
+          }
+        ],
+        "comment": "This genomic region was validated as an active enhancer by\nthe ChIP-STARR-seq massively parallel reporter assay in naive human\nembryonic stem cells. This enhancer associates with the OCT4 and\nNANOG transcription factors and is marked by the H3K27ac histone\nmodification. [provided by RefSeq, Jan 2023].",
+        "contig": "join(complement(AC135776.3:145501..146210))"
+      },
+      "dbxrefs": ["BioProject:PRJNA343958"],
+      "features": [
+        {
+          "start": 0,
+          "end": 710,
+          "strand": 1,
+          "qualifiers": {
+            "organism": ["Homo sapiens"],
+            "mol_type": ["genomic DNA"],
+            "db_xref": ["taxon:9606"],
+            "chromosome": ["16"],
+            "map": ["16"]
+          }
+        },
+        {
+          "start": 100,
+          "end": 610,
+          "strand": 1,
+          "qualifiers": {
+            "standard_name": [
+              "OCT4-NANOG-H3K27ac hESC enhancer GRCh37_chr16:34195587-34196096"
+            ],
+            "note": ["Region: biological region"],
+            "db_xref": ["GeneID:128316591"]
+          }
+        },
+        {
+          "start": 100,
+          "end": 610,
+          "strand": 1,
+          "qualifiers": {
+            "regulatory_class": ["enhancer"],
+            "experiment": [
+              "EXISTENCE:reporter gene assay evidence [ECO:0000049][PMID:30033119]"
+            ],
+            "note": [
+              "OCT4-NANOG-H3K27ac hESC enhancer chr16:34195587-34196096 (GRCh37/hg19 assembly coordinates)"
+            ],
+            "function": [
+              "activates a minimal SCP1, AML or CMV promoter by ChIP-STARR-seq in naive H9 embryonic stem cells {active_cell/tissue: H9 hESC(naive)}"
+            ],
+            "db_xref": ["GeneID:128316591"]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "66c0b74f2c0c857ee899aa75",
+      "id": "ENSR00001001155",
+      "source": "Ensembl_Ensembl",
+      "type": "CTCF_binding_site",
+      "chromosome": "chr16",
+      "start": 34454001,
+      "end": 48454200,
+      "ensembl_data": {
+        "score": 0,
+        "strand": "",
+        "ID": "ENSR00001001155",
+        "extended_start": "34454001",
+        "extended_end": "34454200",
+        "color": "#40e0d0"
+      }
+    }
+  ],
+  "GnomAD": [
+    {
+      "_id": "66c31b9aeb267084484e7a83",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "afr",
+      "count": 29170,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 1658,
+            "freq": 0.2344129979610443
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 5415,
+            "freq": 0.7655869722366333
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 1899,
+            "freq": 0.2527959942817688
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 5613,
+            "freq": 0.7472040057182312
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 3557,
+            "freq": 0.2438810020685196
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 11028,
+            "freq": 0.7561190128326416
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31c1deb2670844860be9b",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "ami",
+      "count": 724,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 41,
+            "freq": 0.2316379994153976
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 136,
+            "freq": 0.7683619856834412
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 42,
+            "freq": 0.2270269989967346
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 143,
+            "freq": 0.7729730010032654
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 83,
+            "freq": 0.2292820066213607
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 279,
+            "freq": 0.770717978477478
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ca2eb267084487302b3",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "amr",
+      "count": 10434,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 1154,
+            "freq": 0.403779000043869
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 0.0003498950100038
+          },
+          "HOMREF": {
+            "count": 1703,
+            "freq": 0.5958709716796875
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 655,
+            "freq": 0.2776600122451782
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1704,
+            "freq": 0.7223399877548218
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 1809,
+            "freq": 0.3467510044574737
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 0.0001916809997055
+          },
+          "HOMREF": {
+            "count": 3407,
+            "freq": 0.6530569791793823
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31d29eb267084488546cb",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "asj",
+      "count": 2668,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 147,
+            "freq": 0.2421749979257583
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 460,
+            "freq": 0.7578250169754028
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 152,
+            "freq": 0.2090779989957809
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 575,
+            "freq": 0.7909219861030579
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 299,
+            "freq": 0.224138006567955
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1035,
+            "freq": 0.7758619785308838
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31db8eb26708448978ae3",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "eas",
+      "count": 3322,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 275,
+            "freq": 0.3142859935760498
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 600,
+            "freq": 0.6857140064239502
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 214,
+            "freq": 0.2722649872303009
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 572,
+            "freq": 0.7277349829673767
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 489,
+            "freq": 0.2944009900093078
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1172,
+            "freq": 0.7055990099906921
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31e41eb26708448a9cefb",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "fin",
+      "count": 5132,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 490,
+            "freq": 0.2511529922485351
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 0.0005125579773448
+          },
+          "HOMREF": {
+            "count": 1460,
+            "freq": 0.7483339905738831
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 162,
+            "freq": 0.2634150087833404
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 453,
+            "freq": 0.7365850210189819
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 652,
+            "freq": 0.2540920078754425
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 0.0003897119895555
+          },
+          "HOMREF": {
+            "count": 1913,
+            "freq": 0.7455180287361145
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ecceb26708448bc1313",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "nfe",
+      "count": 48144,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 1927,
+            "freq": 0.1959729939699173
+          },
+          "HOMALT": {
+            "count": 3,
+            "freq": 0.0003050949890166
+          },
+          "HOMREF": {
+            "count": 7903,
+            "freq": 0.8037220239639282
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 2461,
+            "freq": 0.1728350073099136
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 7.022969657555223e-5
+          },
+          "HOMREF": {
+            "count": 11777,
+            "freq": 0.8270949721336365
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 4388,
+            "freq": 0.1822859942913055
+          },
+          "HOMALT": {
+            "count": 4,
+            "freq": 0.0001661679998505
+          },
+          "HOMREF": {
+            "count": 19680,
+            "freq": 0.8175470232963562
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31f53eb26708448ce572b",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "mid",
+      "count": 52,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 4,
+            "freq": 0.2857140004634857
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 10,
+            "freq": 0.7142860293388367
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 3,
+            "freq": 0.25
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 9,
+            "freq": 0.75
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 7,
+            "freq": 0.2692309916019439
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 19,
+            "freq": 0.7307689785957336
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31fddeb26708448e09b43",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "rmi",
+      "count": 1272,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 80,
+            "freq": 0.2507840096950531
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 239,
+            "freq": 0.7492160201072693
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 67,
+            "freq": 0.2113559991121292
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 250,
+            "freq": 0.788644015789032
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 147,
+            "freq": 0.2311320006847381
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 489,
+            "freq": 0.7688680291175842
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c32065eb26708448f2df5b",
+      "chromosome": "chr16",
+      "start": 34280204,
+      "end": 34289200,
+      "svtype": "deletion",
+      "population": "sas",
+      "count": 3830,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 135,
+            "freq": 0.093684896826744
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1306,
+            "freq": 0.90631502866745
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 50,
+            "freq": 0.1054849997162818
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 424,
+            "freq": 0.8945149779319763
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 185,
+            "freq": 0.0966057032346725
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1730,
+            "freq": 0.9033939838409424
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31b9aeb267084484e7a85",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "afr",
+      "count": 33812,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 8112,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 8794,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 16906,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31c1deb2670844860be9d",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "ami",
+      "count": 842,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 201,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 220,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 421,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ca2eb267084487302b5",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "amr",
+      "count": 12586,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 3492,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2801,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 6293,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31d29eb267084488546cd",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "asj",
+      "count": 3180,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 729,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 861,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1590,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31db8eb26708448978ae5",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "eas",
+      "count": 4054,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1052,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 975,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2027,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31e41eb26708448a9cefd",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "fin",
+      "count": 6476,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2459,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 779,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 3238,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ecceb26708448bc1315",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "nfe",
+      "count": 59078,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 12028,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 1,
+            "freq": 5.710700133931823e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 17510,
+            "freq": 0.9999430179595948
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 1,
+            "freq": 3.3853601053124294e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 29538,
+            "freq": 0.999966025352478
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31f53eb26708448ce572d",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "mid",
+      "count": 64,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 18,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 14,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 32,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31fddeb26708448e09b45",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "rmi",
+      "count": 1572,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 394,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 392,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 786,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c32065eb26708448f2df5d",
+      "chromosome": "chr16",
+      "start": 34365548,
+      "end": 34365643,
+      "svtype": "deletion",
+      "population": "sas",
+      "count": 4404,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1654,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 548,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2202,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a1beb267084481a4a63",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "afr",
+      "count": 29240,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 1,
+            "freq": 0.0001481479994254
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 6749,
+            "freq": 0.9998520016670228
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 7870,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 1,
+            "freq": 6.839950219728053e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 14619,
+            "freq": 0.9999319911003112
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a39eb267084481e6671",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "ami",
+      "count": 776,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 179,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 209,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 388,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a58eb2670844822827f",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "amr",
+      "count": 11696,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 1,
+            "freq": 0.0003101739857811
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 3223,
+            "freq": 0.9996899962425232
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2624,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 1,
+            "freq": 0.0001709990028757
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 5847,
+            "freq": 0.9998289942741394
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a77eb26708448269e8d",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "asj",
+      "count": 3040,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 687,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 833,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1520,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a95eb267084482aba9b",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "eas",
+      "count": 3930,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1011,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 954,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1965,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ab4eb267084482ed6a9",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "fin",
+      "count": 5462,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2001,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 730,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2731,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ad1eb2670844832f2b7",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "nfe",
+      "count": 55396,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 1,
+            "freq": 9.101670002564788e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 10986,
+            "freq": 0.999908983707428
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 1,
+            "freq": 5.9840800531674176e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 16710,
+            "freq": 0.9999399781227112
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 2,
+            "freq": 7.220739644253626e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 27696,
+            "freq": 0.9999279975891112
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31aefeb26708448370ec5",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "mid",
+      "count": 60,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 16,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 14,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 30,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31b0ceb267084483b2ad3",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "rmi",
+      "count": 1436,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 351,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 367,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 718,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31b29eb267084483f46e1",
+      "chromosome": "chr16",
+      "start": 34449328,
+      "end": 34456900,
+      "svtype": "duplication",
+      "population": "sas",
+      "count": 4152,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1545,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 531,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2076,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a1beb267084481a4a64",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "afr",
+      "count": 31392,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 7510,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 1,
+            "freq": 0.0001221599959535
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 8185,
+            "freq": 0.9998779892921448
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 1,
+            "freq": 6.371049676090479e-5
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 15695,
+            "freq": 0.9999359846115112
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a39eb267084481e6672",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "ami",
+      "count": 834,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 199,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 218,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 417,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a58eb26708448228280",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "amr",
+      "count": 11540,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 3180,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2590,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 5770,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a77eb26708448269e8e",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "asj",
+      "count": 3168,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 725,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 859,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1584,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31a95eb267084482aba9c",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "eas",
+      "count": 3846,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1005,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 918,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1923,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ab4eb267084482ed6aa",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "fin",
+      "count": 6350,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2421,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 754,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 3175,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ad1eb2670844832f2b8",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "nfe",
+      "count": 58690,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 11942,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 17403,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 29345,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31aefeb26708448370ec6",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "mid",
+      "count": 64,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 18,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 14,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 32,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31b0ceb267084483b2ad4",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "rmi",
+      "count": 1528,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 382,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 382,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 764,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31b29eb267084483f46e2",
+      "chromosome": "chr16",
+      "start": 34481999,
+      "end": 34495400,
+      "svtype": "duplication",
+      "population": "sas",
+      "count": 4218,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1604,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 505,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2109,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31b9aeb267084484e7a86",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "afr",
+      "count": 33812,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 23,
+            "freq": 0.0028346099425107
+          },
+          "HOMALT": {
+            "count": 7,
+            "freq": 0.0008627059869468
+          },
+          "HOMREF": {
+            "count": 8084,
+            "freq": 0.9963030219078064
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 21,
+            "freq": 0.0023885399568825
+          },
+          "HOMALT": {
+            "count": 4,
+            "freq": 0.0004549589939415
+          },
+          "HOMREF": {
+            "count": 8767,
+            "freq": 0.9971569776535034
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 44,
+            "freq": 0.0026026300620287
+          },
+          "HOMALT": {
+            "count": 11,
+            "freq": 0.0006506569916382
+          },
+          "HOMREF": {
+            "count": 16851,
+            "freq": 0.9967470169067384
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31c1deb2670844860be9e",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "ami",
+      "count": 842,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 201,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 220,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 421,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ca2eb267084487302b6",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "amr",
+      "count": 12594,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 2,
+            "freq": 0.0005727380048483
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 0.0002863690024241
+          },
+          "HOMREF": {
+            "count": 3489,
+            "freq": 0.9991409778594972
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 1,
+            "freq": 0.0003565060032997
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2804,
+            "freq": 0.9996439814567566
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 3,
+            "freq": 0.0004764169862028
+          },
+          "HOMALT": {
+            "count": 1,
+            "freq": 0.0001588059967616
+          },
+          "HOMREF": {
+            "count": 6293,
+            "freq": 0.999364972114563
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31d29eb267084488546ce",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "asj",
+      "count": 3180,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 729,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 861,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1590,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31db8eb26708448978ae6",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "eas",
+      "count": 4054,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1052,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 975,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2027,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31e41eb26708448a9cefe",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "fin",
+      "count": 6476,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2459,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 779,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 3238,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31ecceb26708448bc1316",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "nfe",
+      "count": 59086,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 12032,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 17511,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 29543,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31f53eb26708448ce572e",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "mid",
+      "count": 64,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 18,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 14,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 32,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c31fddeb26708448e09b46",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "rmi",
+      "count": 1572,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 394,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 392,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 786,
+            "freq": 1.0
+          }
+        }
+      }
+    },
+    {
+      "_id": "66c32065eb26708448f2df5e",
+      "chromosome": "chr16",
+      "start": 34484741,
+      "end": 34484829,
+      "svtype": "deletion",
+      "population": "sas",
+      "count": 4406,
+      "frequencies": {
+        "male": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 1655,
+            "freq": 1.0
+          }
+        },
+        "female": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 548,
+            "freq": 1.0
+          }
+        },
+        "all": {
+          "HET": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMALT": {
+            "count": 0,
+            "freq": 0.0
+          },
+          "HOMREF": {
+            "count": 2203,
+            "freq": 1.0
+          }
+        }
+      }
+    }
+  ],
+  "HI_gene": [],
+  "HI_region": [],
+  "Genes": [
+    {
+      "_id": "66c324c212f898e67a6eeb89",
+      "chromosome": "chr16",
+      "source": "HAVANA",
+      "start": 34351499,
+      "end": 34381110,
+      "strand": "-",
+      "phase": "",
+      "ID": "ENSG00000284209.3",
+      "gene_id": "ENSG00000284209.3",
+      "gene_type": "protein_coding",
+      "gene_name": "CCNYL1B",
+      "level": "2",
+      "hgnc_id": "HGNC:56313",
+      "havana_gene": "OTTHUMG00000192001.2",
+      "transcript": [
+        {
+          "start": 34351499,
+          "end": 34381110,
+          "strand": "-",
+          "phase": "",
+          "ID": "ENST00000638228.3",
+          "Parent": "ENSG00000284209.3",
+          "gene_id": "ENSG00000284209.3",
+          "transcript_id": "ENST00000638228.3",
+          "gene_type": "protein_coding",
+          "gene_name": "CCNYL1B",
+          "transcript_type": "protein_coding",
+          "transcript_name": "CCNYL1B-201",
+          "level": "2",
+          "protein_id": "ENSP00000513283.1",
+          "transcript_support_level": "NA",
+          "hgnc_id": "HGNC:56313",
+          "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+          "havana_gene": "OTTHUMG00000192001.2",
+          "havana_transcript": "OTTHUMT00000491909.2",
+          "exon": [
+            {
+              "start": 34380784,
+              "end": 34381110,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:1",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "1",
+              "exon_id": "ENSE00003894960.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34379399,
+              "end": 34379458,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:2",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "2",
+              "exon_id": "ENSE00003970440.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34377015,
+              "end": 34377049,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "3",
+              "exon_id": "ENSE00003970439.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34371564,
+              "end": 34371664,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:4",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "4",
+              "exon_id": "ENSE00003803274.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34368551,
+              "end": 34368586,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:5",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "5",
+              "exon_id": "ENSE00003806840.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34365365,
+              "end": 34365416,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:6",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "6",
+              "exon_id": "ENSE00003809367.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34364659,
+              "end": 34364778,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:7",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "7",
+              "exon_id": "ENSE00003810143.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34360433,
+              "end": 34360599,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:8",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "8",
+              "exon_id": "ENSE00003807463.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34355567,
+              "end": 34355729,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:9",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "9",
+              "exon_id": "ENSE00003802531.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34351499,
+              "end": 34353684,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000638228.3:10",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "10",
+              "exon_id": "ENSE00003809143.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            }
+          ],
+          "CDS": [
+            {
+              "start": 34380784,
+              "end": 34380793,
+              "strand": "-",
+              "phase": "0",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "1",
+              "exon_id": "ENSE00003894960.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34379399,
+              "end": 34379458,
+              "strand": "-",
+              "phase": "2",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "2",
+              "exon_id": "ENSE00003970440.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34377015,
+              "end": 34377049,
+              "strand": "-",
+              "phase": "2",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "3",
+              "exon_id": "ENSE00003970439.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34371564,
+              "end": 34371664,
+              "strand": "-",
+              "phase": "0",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "4",
+              "exon_id": "ENSE00003803274.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34368551,
+              "end": 34368586,
+              "strand": "-",
+              "phase": "1",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "5",
+              "exon_id": "ENSE00003806840.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34365365,
+              "end": 34365416,
+              "strand": "-",
+              "phase": "1",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "6",
+              "exon_id": "ENSE00003809367.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34364659,
+              "end": 34364778,
+              "strand": "-",
+              "phase": "0",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "7",
+              "exon_id": "ENSE00003810143.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34360433,
+              "end": 34360599,
+              "strand": "-",
+              "phase": "0",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "8",
+              "exon_id": "ENSE00003807463.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34355567,
+              "end": 34355729,
+              "strand": "-",
+              "phase": "1",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "9",
+              "exon_id": "ENSE00003802531.1",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            },
+            {
+              "start": 34353571,
+              "end": 34353684,
+              "strand": "-",
+              "phase": "0",
+              "ID": "CDS:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "10",
+              "exon_id": "ENSE00003809143.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            }
+          ],
+          "start_codon": [
+            {
+              "start": 34380791,
+              "end": 34380793,
+              "strand": "-",
+              "phase": "0",
+              "ID": "start_codon:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "1",
+              "exon_id": "ENSE00003894960.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            }
+          ],
+          "stop_codon": [
+            {
+              "start": 34353571,
+              "end": 34353573,
+              "strand": "-",
+              "phase": "0",
+              "ID": "stop_codon:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "10",
+              "exon_id": "ENSE00003809143.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            }
+          ],
+          "five_prime_UTR": [
+            {
+              "start": 34380794,
+              "end": 34381110,
+              "strand": "-",
+              "phase": "",
+              "ID": "UTR5:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "1",
+              "exon_id": "ENSE00003894960.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            }
+          ],
+          "three_prime_UTR": [
+            {
+              "start": 34351499,
+              "end": 34353570,
+              "strand": "-",
+              "phase": "",
+              "ID": "UTR3:ENST00000638228.3",
+              "Parent": "ENST00000638228.3",
+              "gene_id": "ENSG00000284209.3",
+              "transcript_id": "ENST00000638228.3",
+              "gene_type": "protein_coding",
+              "gene_name": "CCNYL1B",
+              "transcript_type": "protein_coding",
+              "transcript_name": "CCNYL1B-201",
+              "exon_number": "10",
+              "exon_id": "ENSE00003809143.2",
+              "level": "2",
+              "protein_id": "ENSP00000513283.1",
+              "transcript_support_level": "NA",
+              "hgnc_id": "HGNC:56313",
+              "tag": "basic,Ensembl_canonical,GENCODE_Primary,appris_principal_1",
+              "havana_gene": "OTTHUMG00000192001.2",
+              "havana_transcript": "OTTHUMT00000491909.2"
+            }
+          ]
+        }
+      ],
+      "name": "CCNYL1B",
+      "full_name": "NOT AVAILABLE",
+      "alternative_names": [],
+      "external": {},
+      "pathways": [],
+      "function": {},
+      "expression": {},
+      "conservancy": {
+        "Gene Damage Index": {
+          "score": {},
+          "mutation_tolerance": {
+            "mendelian": {},
+            "primary_immunodeficiency": {},
+            "cancer": {}
+          }
+        },
+        "ExAC Winsorized": {
+          "score": {}
+        },
+        "Huang": {
+          "score": {},
+          "risk": {}
+        },
+        "HIPred": {
+          "score": {},
+          "risk": {}
+        },
+        "GHIS": {
+          "score": {},
+          "risk": {}
+        },
+        "RVIS EVS": {
+          "score": {},
+          "percentile": {}
+        },
+        "RVIS ExAC": {
+          "score": {},
+          "percentile": {}
+        },
+        "gnomeAD": {
+          "score": {
+            "loss": {}
+          },
+          "risk": {}
+        },
+        "ExAC": {
+          "score": {
+            "loss": {}
+          },
+          "risk": {}
+        },
+        "ExAC nonTCGA": {
+          "score": {
+            "loss": {}
+          }
+        },
+        "ExAC nonpsych": {
+          "score": {
+            "loss": {}
+          }
+        },
+        "Gene Indispensability Score": {
+          "score": {},
+          "significance": {}
+        },
+        "Mouse Homology": {
+          "significance": {}
+        },
+        "CRISPR1": {
+          "significance": {}
+        },
+        "CRISPR2": {
+          "significance": {}
+        },
+        "Gene trap": {
+          "significance": {}
+        }
+      },
+      "phenotype": {}
+    },
+    {
+      "_id": "66c324c212f898e67a6eeb8a",
+      "chromosome": "chr16",
+      "source": "HAVANA",
+      "start": 34387599,
+      "end": 34389827,
+      "strand": "-",
+      "phase": "",
+      "ID": "ENSG00000288300.1",
+      "gene_id": "ENSG00000288300.1",
+      "gene_type": "lncRNA",
+      "gene_name": "ENSG00000288300",
+      "level": "2",
+      "havana_gene": "OTTHUMG00000195914.1",
+      "transcript": [
+        {
+          "start": 34387599,
+          "end": 34389827,
+          "strand": "-",
+          "phase": "",
+          "ID": "ENST00000673429.1",
+          "Parent": "ENSG00000288300.1",
+          "gene_id": "ENSG00000288300.1",
+          "transcript_id": "ENST00000673429.1",
+          "gene_type": "lncRNA",
+          "gene_name": "ENSG00000288300",
+          "transcript_type": "lncRNA",
+          "transcript_name": "ENST00000673429",
+          "level": "2",
+          "tag": "basic,Ensembl_canonical",
+          "havana_gene": "OTTHUMG00000195914.1",
+          "havana_transcript": "OTTHUMT00000529570.1",
+          "exon": [
+            {
+              "start": 34387599,
+              "end": 34389827,
+              "strand": "-",
+              "phase": "",
+              "ID": "exon:ENST00000673429.1:1",
+              "Parent": "ENST00000673429.1",
+              "gene_id": "ENSG00000288300.1",
+              "transcript_id": "ENST00000673429.1",
+              "gene_type": "lncRNA",
+              "gene_name": "ENSG00000288300",
+              "transcript_type": "lncRNA",
+              "transcript_name": "ENST00000673429",
+              "exon_number": "1",
+              "exon_id": "ENSE00003890580.1",
+              "level": "2",
+              "tag": "basic,Ensembl_canonical",
+              "havana_gene": "OTTHUMG00000195914.1",
+              "havana_transcript": "OTTHUMT00000529570.1"
+            }
+          ]
+        }
+      ],
+      "name": "ENSG00000288300",
+      "full_name": "NOT AVAILABLE",
+      "alternative_names": [],
+      "external": {},
+      "pathways": [],
+      "function": {},
+      "expression": {},
+      "conservancy": {
+        "Gene Damage Index": {
+          "score": {},
+          "mutation_tolerance": {
+            "mendelian": {},
+            "primary_immunodeficiency": {},
+            "cancer": {}
+          }
+        },
+        "ExAC Winsorized": {
+          "score": {}
+        },
+        "Huang": {
+          "score": {},
+          "risk": {}
+        },
+        "HIPred": {
+          "score": {},
+          "risk": {}
+        },
+        "GHIS": {
+          "score": {},
+          "risk": {}
+        },
+        "RVIS EVS": {
+          "score": {},
+          "percentile": {}
+        },
+        "RVIS ExAC": {
+          "score": {},
+          "percentile": {}
+        },
+        "gnomeAD": {
+          "score": {
+            "loss": {}
+          },
+          "risk": {}
+        },
+        "ExAC": {
+          "score": {
+            "loss": {}
+          },
+          "risk": {}
+        },
+        "ExAC nonTCGA": {
+          "score": {
+            "loss": {}
+          }
+        },
+        "ExAC nonpsych": {
+          "score": {
+            "loss": {}
+          }
+        },
+        "Gene Indispensability Score": {
+          "score": {},
+          "significance": {}
+        },
+        "Mouse Homology": {
+          "significance": {}
+        },
+        "CRISPR1": {
+          "significance": {}
+        },
+        "CRISPR2": {
+          "significance": {}
+        },
+        "Gene trap": {
+          "significance": {}
+        }
+      },
+      "phenotype": {}
+    },
+    {
+      "_id": "66c324c212f898e67a6eeb8b",
+      "chromosome": "chr16",
+      "source": "HAVANA",
+      "start": 34446566,
+      "end": 34448866,
+      "strand": "+",
+      "phase": "",
+      "ID": "ENSG00000286968.1",
+      "gene_id": "ENSG00000286968.1",
+      "gene_type": "unprocessed_pseudogene",
+      "gene_name": "ENSG00000286968",
+      "level": "2",
+      "havana_gene": "OTTHUMG00000193782.1",
+      "transcript": [
+        {
+          "start": 34446566,
+          "end": 34448866,
+          "strand": "+",
+          "phase": "",
+          "ID": "ENST00000669161.1",
+          "Parent": "ENSG00000286968.1",
+          "gene_id": "ENSG00000286968.1",
+          "transcript_id": "ENST00000669161.1",
+          "gene_type": "unprocessed_pseudogene",
+          "gene_name": "ENSG00000286968",
+          "transcript_type": "unprocessed_pseudogene",
+          "transcript_name": "ENST00000669161",
+          "level": "2",
+          "ont": "PGO:0000005",
+          "tag": "basic,Ensembl_canonical",
+          "havana_gene": "OTTHUMG00000193782.1",
+          "havana_transcript": "OTTHUMT00000504676.1",
+          "exon": [
+            {
+              "start": 34446566,
+              "end": 34446948,
+              "strand": "+",
+              "phase": "",
+              "ID": "exon:ENST00000669161.1:1",
+              "Parent": "ENST00000669161.1",
+              "gene_id": "ENSG00000286968.1",
+              "transcript_id": "ENST00000669161.1",
+              "gene_type": "unprocessed_pseudogene",
+              "gene_name": "ENSG00000286968",
+              "transcript_type": "unprocessed_pseudogene",
+              "transcript_name": "ENST00000669161",
+              "exon_number": "1",
+              "exon_id": "ENSE00003855908.1",
+              "level": "2",
+              "ont": "PGO:0000005",
+              "tag": "basic,Ensembl_canonical",
+              "havana_gene": "OTTHUMG00000193782.1",
+              "havana_transcript": "OTTHUMT00000504676.1"
+            },
+            {
+              "start": 34447033,
+              "end": 34447677,
+              "strand": "+",
+              "phase": "",
+              "ID": "exon:ENST00000669161.1:2",
+              "Parent": "ENST00000669161.1",
+              "gene_id": "ENSG00000286968.1",
+              "transcript_id": "ENST00000669161.1",
+              "gene_type": "unprocessed_pseudogene",
+              "gene_name": "ENSG00000286968",
+              "transcript_type": "unprocessed_pseudogene",
+              "transcript_name": "ENST00000669161",
+              "exon_number": "2",
+              "exon_id": "ENSE00003870203.1",
+              "level": "2",
+              "ont": "PGO:0000005",
+              "tag": "basic,Ensembl_canonical",
+              "havana_gene": "OTTHUMG00000193782.1",
+              "havana_transcript": "OTTHUMT00000504676.1"
+            },
+            {
+              "start": 34448411,
+              "end": 34448628,
+              "strand": "+",
+              "phase": "",
+              "ID": "exon:ENST00000669161.1:3",
+              "Parent": "ENST00000669161.1",
+              "gene_id": "ENSG00000286968.1",
+              "transcript_id": "ENST00000669161.1",
+              "gene_type": "unprocessed_pseudogene",
+              "gene_name": "ENSG00000286968",
+              "transcript_type": "unprocessed_pseudogene",
+              "transcript_name": "ENST00000669161",
+              "exon_number": "3",
+              "exon_id": "ENSE00003878225.1",
+              "level": "2",
+              "ont": "PGO:0000005",
+              "tag": "basic,Ensembl_canonical",
+              "havana_gene": "OTTHUMG00000193782.1",
+              "havana_transcript": "OTTHUMT00000504676.1"
+            },
+            {
+              "start": 34448770,
+              "end": 34448866,
+              "strand": "+",
+              "phase": "",
+              "ID": "exon:ENST00000669161.1:4",
+              "Parent": "ENST00000669161.1",
+              "gene_id": "ENSG00000286968.1",
+              "transcript_id": "ENST00000669161.1",
+              "gene_type": "unprocessed_pseudogene",
+              "gene_name": "ENSG00000286968",
+              "transcript_type": "unprocessed_pseudogene",
+              "transcript_name": "ENST00000669161",
+              "exon_number": "4",
+              "exon_id": "ENSE00003863295.1",
+              "level": "2",
+              "ont": "PGO:0000005",
+              "tag": "basic,Ensembl_canonical",
+              "havana_gene": "OTTHUMG00000193782.1",
+              "havana_transcript": "OTTHUMT00000504676.1"
+            }
+          ]
+        }
+      ],
+      "name": "ENSG00000286968",
+      "full_name": "NOT AVAILABLE",
+      "alternative_names": [],
+      "external": {},
+      "pathways": [],
+      "function": {},
+      "expression": {},
+      "conservancy": {
+        "Gene Damage Index": {
+          "score": {},
+          "mutation_tolerance": {
+            "mendelian": {},
+            "primary_immunodeficiency": {},
+            "cancer": {}
+          }
+        },
+        "ExAC Winsorized": {
+          "score": {}
+        },
+        "Huang": {
+          "score": {},
+          "risk": {}
+        },
+        "HIPred": {
+          "score": {},
+          "risk": {}
+        },
+        "GHIS": {
+          "score": {},
+          "risk": {}
+        },
+        "RVIS EVS": {
+          "score": {},
+          "percentile": {}
+        },
+        "RVIS ExAC": {
+          "score": {},
+          "percentile": {}
+        },
+        "gnomeAD": {
+          "score": {
+            "loss": {}
+          },
+          "risk": {}
+        },
+        "ExAC": {
+          "score": {
+            "loss": {}
+          },
+          "risk": {}
+        },
+        "ExAC nonTCGA": {
+          "score": {
+            "loss": {}
+          }
+        },
+        "ExAC nonpsych": {
+          "score": {
+            "loss": {}
+          }
+        },
+        "Gene Indispensability Score": {
+          "score": {},
+          "significance": {}
+        },
+        "Mouse Homology": {
+          "significance": {}
+        },
+        "CRISPR1": {
+          "significance": {}
+        },
+        "CRISPR2": {
+          "significance": {}
+        },
+        "Gene trap": {
+          "significance": {}
+        }
+      },
+      "phenotype": {}
+    }
+  ]
+}

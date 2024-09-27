@@ -1,0 +1,78 @@
+<tbody>
+  <tr>
+    <th>Automated classification:</th>
+    {% if scores.classification == "PATHOGENIC" %}
+    <th
+      class="classification"
+      style="
+        background-image: linear-gradient(
+          to right,
+          white,
+          rgba(255, 0, 0, 0.6),
+          white
+        );
+      "
+    >
+      {{ scores.classification }}
+    </th>
+    {% elif scores.classification == "LIKELY PATHOGENIC" %}
+    <th
+      class="classification"
+      style="
+        background-image: linear-gradient(
+          to right,
+          white,
+          rgba(255, 165, 0, 0.6),
+          white
+        );
+      "
+    >
+      {{ scores.classification }}
+    </th>
+    {% elif scores.classification == "VARIANT OF UNCERTAIN SIGNIFICANCE" %}
+    <th
+      class="classification"
+      style="
+        background-image: linear-gradient(
+          to right,
+          white,
+          rgba(255, 255, 0, 0.6),
+          white
+        );
+      "
+    >
+      {{ scores.classification }}
+    </th>
+    {% elif scores.classification == "LIKELY BENIGN" %}
+    <th
+      class="classification"
+      style="
+        background-image: linear-gradient(
+          to right,
+          white,
+          rgba(144, 238, 144, 0.6),
+          white
+        );
+      "
+    >
+      {{ scores.classification }}
+    </th>
+    {% elif scores.classification == "BENIGN" %}
+    <th
+      class="classification"
+      style="
+        background-image: linear-gradient(
+          to right,
+          white,
+          rgba(154, 205, 50, 0.6),
+          white
+        );
+      "
+    >
+      {{ scores.classification }}
+    </th>
+    {% else %}
+    <th class="classification">{{ scores.classification }}</th>
+    {% endif %}
+  </tr>
+</tbody>

@@ -1,0 +1,241 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: small;
+  margin: 0;
+}
+
+.sheet-outer {
+  margin: 0;
+}
+
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+@media screen {
+  body {
+    background: #e0e0e0;
+  }
+
+  .sheet {
+    background: white;
+    box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+    margin: 5mm auto;
+  }
+}
+
+.sheet-outer.A4 .sheet {
+  width: 210mm;
+  height: 296mm;
+}
+.sheet.padding-5mm {
+  padding: 5mm;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .sheet-outer.A4,
+  .sheet-outer.A5.landscape {
+    width: 210mm;
+    print-color-adjust: exact;
+  }
+}
+
+.tb-cnv {
+  border-top: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+.tb-classification {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.tb-score th,
+.tb-score td {
+  width: 25%;
+  vertical-align: top;
+}
+
+.tb-score td {
+  position: relative;
+  top: -85px;
+  text-align: center;
+  font-size: small;
+}
+
+.plot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  padding: 5px;
+}
+
+th {
+  font-size: medium;
+  font-weight: bold;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+table .tb-group {
+  border-left: 1px solid black;
+}
+
+.tb-report td {
+  vertical-align: top;
+  padding: 0 25px 10px 25px;
+  word-wrap: break-word;
+}
+
+.classification {
+  width: 70%;
+  text-align: center;
+}
+
+.divider {
+  border-top: 1px solid gray;
+  margin: 3px;
+}
+
+.tb-acmg,
+.tb-genes,
+.tb-elements {
+  position: relative;
+  top: -22mm;
+}
+
+.tb-acmg th {
+  width: 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tb-acmg td {
+  padding: 0;
+}
+
+.tb-acmg-section,
+.tb-acmg-section th,
+.tb-acmg-section td {
+  padding: 0;
+}
+
+h4 {
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+.tb-acmg-section p {
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  font-size: smaller;
+}
+
+.td-score {
+  width: 5%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.score-box {
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 8px 12px 8px 12px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.pathogenic {
+  border: 2px solid rgb(225, 29, 29);
+  background-color: rgba(225, 29, 29, 0.4);
+}
+
+.benign {
+  border: 2px solid rgb(0, 128, 0);
+  background-color: rgba(0, 128, 0, 0.4);
+}
+
+.scrollable {
+  height: 120mm;
+  overflow-y: scroll;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 0 10px 0 10px;
+  /* -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%); */
+}
+
+.last {
+  border-right: none;
+}
+
+table.tb-genes,
+table.tb-elements {
+  /* border: 1px solid rgba(0, 0, 0, 0.4);*/
+  border-radius: 5px;
+}
+
+.tb-genes th,
+.tb-elements th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tb-genes td,
+.tb-elements td {
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tb-genes td:first-child,
+.tb-elements td:first-child {
+  border-left: none;
+}
+
+.tb-genes td:last-child,
+.tb-elements td:last-child {
+  border-right: none;
+}
+
+.tb-elements td {
+  width: 100%;
+}
+
+.list-scrollable {
+  max-height: 40mm;
+  overflow-y: scroll;
+  /* -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%); */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: gray;
+}

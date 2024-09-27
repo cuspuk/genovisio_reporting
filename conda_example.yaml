@@ -1,0 +1,9 @@
+name: genovisio_reporting
+channels:
+  - nodefaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - git+https://github.com/cuspuk/genovisio_reporting.git
