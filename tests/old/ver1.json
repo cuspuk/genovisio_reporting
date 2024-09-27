@@ -1,0 +1,195 @@
+{
+  "CNV": {
+    "Detection": {
+      "Location": {
+        "GenomeVersion": "GRCh38.p12",
+        "Chromosome": "chr10",
+        "Start": 123456789,
+        "End": 163456789
+      },
+      "Variation": {
+        "Type": "Duplication",
+        "Copies": 3,
+        "Length": 4000000
+      },
+      "Method": {
+        "Type": "microArray",
+        "Platform": "Illumina NovaSeq ...",
+        "Chip": "...",
+        "Resolution": "...",
+        "TechnicalDetails": "..."
+      }
+    },
+    "Annotation": {
+      "Genes": [
+        {
+          "Gene": "SFTA3",
+          "Type": "protein coding",
+          "Identifiers": [
+            {
+              "Database": "GenCode",
+              "Identifier": "abc",
+              "URL": "abc"
+            },
+            {
+              "Database": "GenCards",
+              "Identifier": "abc",
+              "URL": "abc"
+            }
+          ],
+          "Names": [
+            {
+              "Name": "SFTA3",
+              "FullName": "Surfactant Associated 3"
+            },
+            {
+              "Name": "SFTPH",
+              "FullName": "Surfactant-Associated Protein H"
+            }
+          ]
+        },
+        {
+          "Gene": "DDX11L2",
+          "Type": "lncRNA"
+        },
+        {
+          "Gene": "OR4G11P",
+          "Type": "transcribed_unprocessed_pseudogene"
+        }
+      ],
+      "RegulatoryElements": [
+        {
+          "Type": "promoter",
+          "Name": "abc"
+        }
+      ],
+      "OverlappedCNVs": [
+        {
+          "Location": {
+            "GenomeVersion": "GRCh38.p12",
+            "Chromosome": "chr10",
+            "Start": 123456789,
+            "End": 163456789
+          },
+          "Variation": {
+            "Type": "Duplication",
+            "Copies": 3,
+            "Length": 4000000
+          },
+          "Method": {
+            "Platform": "aCGH",
+            "ProtocolName": "...",
+            "Protocol": "...",
+            "SPD": "..."
+          },
+          "Source": "ClinGen_v1.2.4",
+          "Decision": "Pathogenic",
+          "Overlap": {
+            "Type": "PartialOverlap",
+            "Intersection": {
+              "Bases": 401100,
+              "Proportion": 0.1,
+              "TargetProportion": 0.9
+            },
+            "Left": {
+              "Bases": 10401100,
+              "Proportion": 0.9
+            }
+          }
+        }
+      ]
+    },
+    "Prediction": [
+      {
+        "Source": "ISV_v2.0.123",
+        "Decision": "Pathogenic",
+        "Score": 52,
+        "PathogenicityProbability": 0.99
+      },
+      {
+        "Source": "AnnotSV_v3.1.4",
+        "Decision": "Likely Pathogenic",
+        "Score": 11,
+        "PathogenicityProbability": 0.92
+      },
+      {
+        "Source": "CLAUDE_v3.1.4",
+        "Decision": "Likely Pathogenic",
+        "Score": 11,
+        "PathogenicityProbability": 0.92
+      }
+    ],
+    "Classification": [
+      {
+        "Scheme": "ACMG",
+        "Revision": "v1",
+        "Methods": [
+          {
+            "Source": "MarCNV_v1.2.3",
+            "Score": 1,
+            "Decision": "Pathogenic",
+            "Categories": [
+              {
+                "Category": 1,
+                "SelectedOption": "A",
+                "Score": 0,
+                "Reason": "The number of overlapping protein-coding genes (58) or regulatory elements (646) is more than zero"
+              },
+              {
+                "Category": 2,
+                "SelectedOption": "A",
+                "Score": 1,
+                "Reason": "Completely contains an established HI region 5p15 terminal (Cri du chat syndrome) region with HI score 3."
+              }
+            ]
+          },
+          {
+            "Source": "AnnotSV_v3.1.4",
+            "Decision": "Likely Pathogenic",
+            "Score": 1.9,
+            "AnnotSV_ranking_criteria": "1A (cf Gene_count, RE_gene, +0.00);2A (cf P_loss_source, +1.00);3C (1518 genes, +0.90);5F (+0.00)"
+          }
+        ]
+      }
+    ],
+    "Sources": [
+      {
+        "Alias": "ClinGen_v1.2.4",
+        "Name": "ClinGen",
+        "Version": "1.2.4",
+        "Type": "Database",
+        "Accessed": "2024-08-02T00:00:00.000Z"
+      },
+      {
+        "Alias": "ClinGen_v20240719_genes",
+        "Name": "ClinGen",
+        "Version": 20240719,
+        "Type": "Database"
+      },
+      {
+        "Alias": "ClinGen_v20240719_regions",
+        "Name": "ClinGen",
+        "Version": 20240719,
+        "Type": "Database"
+      },
+      {
+        "Alias": "GeneCode_v46",
+        "Name": "GeneCode",
+        "Version": 46,
+        "Type": "Database"
+      },
+      {
+        "Alias": "RefSeq",
+        "Name": "RefSeq",
+        "Type": "Database",
+        "Accessed": "2024-07-11T00:00:00.000Z"
+      },
+      {
+        "Alias": "MarCNV_v1.2.3",
+        "Name": "MarCNV",
+        "Version": "1.2.3",
+        "Type": "Method"
+      }
+    ]
+  }
+}

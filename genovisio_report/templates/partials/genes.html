@@ -1,0 +1,33 @@
+<thead>
+  <tr>
+    <th colspan="4">Protein-coding genes: {{ genes.protein_coding.count }}</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+      <h4>Morbid: {{ genes.morbid.count }}</h4>
+      <div class="list-scrollable">
+        <p>{{ genes.morbid.list }}</p>
+      </div>
+    </td>
+    <td>
+      <h4>Disease-associated: {{ genes.disease.count }}</h4>
+      <div class="list-scrollable">
+        <p>{{ genes.disease.list }}</p>
+      </div>
+    </td>
+    <td>
+      <h4>Haploinsufficient: {{ genes.hi.count }}</h4>
+      <div class="list-scrollable">
+        <p>{{ genes.hi.list }}</p>
+      </div>
+    </td>
+    <td>
+      <h4>Triplosensitive: {{ genes.ts.count }}</h4>
+      <div class="list-scrollable">
+        <p>{{ genes.ts.list }}</p>
+      </div>
+    </td>
+  </tr>
+</tbody>

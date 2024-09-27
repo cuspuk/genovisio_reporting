@@ -1,0 +1,39 @@
+name: Test ISV package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "poetry config virtualenvs.create false" >> ~/.bashrc
+          source ~/.bashrc
+          poetry --version
+
+      - name: Install dependencies
+        run: |
+          poetry install --no-root
+
+      - name: Run tests
+        run: |
+          poetry run genovisio-report --annot tests/isv_annot.json --isv tests/isv.json --marcnv tests/marcnv.json --hybrid tests/hybrid.json --out_html tests/test_output.html
+
+      - name: Compare outputs
+        run: |
+          diff tests/test_output.html tests/expected.html

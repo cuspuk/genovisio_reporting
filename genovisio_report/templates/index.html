@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Report {{ id }}</title>
+    <link
+      href="https://cdn.datatables.net/2.1.4/css/dataTables.dataTables.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.4/js/dataTables.min.js"></script>
+    <script
+      src="https://cdn.plot.ly/plotly-2.35.2.min.js"
+      charset="utf-8"
+    ></script>
+
+    <style>
+      {{ css }}
+    </style>
+  </head>
+
+  <body>
+    <div class="sheet-outer A4">
+      <section class="sheet padding-5mm">
+        <h1 style="text-align: right">Report ID: {{ id }}</h1>
+
+        <table class="tb-cnv">
+          {% include 'partials/cnv_info.html' %}
+        </table>
+
+        <table class="tb-classification">
+          {% include 'partials/autoclassification.html' %}
+        </table>
+
+        <table class="tb-score">
+          {% include 'partials/prediction_summary.html' %}
+        </table>
+
+        <table class="tb-acmg">
+          <thead>
+            <tr>
+              <th>ACMG-ClinGen Standards (marCNV):</th>
+              <th>ISV SHAP values:</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>{% include 'partials/acmg.html' %}</td>
+              <td>
+                <div class="last">
+                  <div id="isv_shap"></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="tb-genes">
+          {% include 'partials/genes.html' %}
+        </table>
+
+        <!--
+        <table class="tb-elements">
+          <thead>
+            <tr>
+              <th>Functionally important elements: elements.total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <div class="list-scrollable">
+                  elements.list
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    -->
+      </section>
+    </div>
+
+    <script>
+      // Function to set the color of the portion of the pie chart and set the other portions to invisible
+      function setColor(pie, score) {
+        var trace = {
+          text: ["B", "LB", "VUS", "LP", "P", " "],
+          marker: {
+            colors: [
+              "rgba(154, 205, 50, 0.3)",
+              "rgba(144, 238, 144, 0.3)",
+              "rgba(255, 255, 0, 0.3)",
+              "rgba(255, 165, 0, 0.3)",
+              "rgba(255, 0, 0, 0.3)",
+              "white",
+            ],
+            line: {
+              color: [
+                "rgba(154, 205, 50, 1)",
+                "rgba(144, 238, 144, 1)",
+                "rgba(255, 230, 0, 1)",
+                "rgba(255, 165, 0, 1)",
+                "rgba(255, 0, 0, 1)",
+                "white",
+              ],
+              width: [0, 0, 0, 0, 0, 0],
+            },
+          },
+          pull: [0, 0, 0, 0, 0, 0],
+        };
+
+        switch (pie) {
+          case "marcnv":
+            if (score <= -0.9) {
+              trace.marker.colors[0] = "rgba(154, 205, 50, 0.6)";
+              trace.marker.line.color[0] = "rgba(154, 205, 50, 1)";
+              trace.marker.line.width[0] = 3;
+              trace.pull[0] = 0.1;
+              trace.text[0] = "<b>B</b>";
+            } else if (score > -0.9 && score < -0.5) {
+              trace.marker.colors[1] = "rgba(144, 238, 144, 0.6)";
+              trace.marker.line.color[1] = "rgba(144, 238, 144, 1)";
+              trace.marker.line.width[1] = 3;
+              trace.pull[1] = 0.1;
+              trace.text[1] = "<b>LB</b>";
+            } else if (score >= -0.5 && score <= 0.5) {
+              trace.marker.colors[2] = "rgba(255, 230, 0, 0.6)";
+              trace.marker.line.color[2] = "rgba(255, 230, 0, 1)";
+              trace.marker.line.width[2] = 3;
+              trace.pull[2] = 0.1;
+              trace.text[2] = "<b>VUS</b>";
+            } else if (score > 0.5 && score < 0.9) {
+              trace.marker.colors[3] = "rgba(255, 165, 0, 0.6)";
+              trace.marker.line.color[3] = "rgba(255, 165, 0, 1)";
+              trace.marker.line.width[3] = 3;
+              trace.pull[3] = 0.1;
+              trace.text[3] = "<b>LP</b>";
+            } else if (score >= 0.9) {
+              trace.marker.colors[4] = "rgba(255, 0, 0, 0.6)";
+              trace.marker.line.color[4] = "rgba(255, 0, 0, 1)";
+              trace.marker.line.width[4] = 3;
+              trace.pull[4] = 0.1;
+              trace.text[4] = "<b>P</b>";
+            }
+            break;
+          case "isv":
+            if (score <= 0.1) {
+              trace.marker.colors[0] = "rgba(154, 205, 50, 0.6)";
+              trace.marker.line.color[0] = "rgba(154, 205, 50, 1)";
+              trace.marker.line.width[0] = 3;
+              trace.pull[0] = 0.1;
+              trace.text[0] = "<b>B</b>";
+            } else if (score > 0.1 && score < 0.25) {
+              trace.marker.colors[1] = "rgba(144, 238, 144, 0.6)";
+              trace.marker.line.color[1] = "rgba(144, 238, 144, 1)";
+              trace.marker.line.width[1] = 3;
+              trace.pull[1] = 0.1;
+              trace.text[1] = "<b>LB</b>";
+            } else if (score >= 0.25 && score <= 0.75) {
+              trace.marker.colors[2] = "rgba(255, 230, 0, 0.6)";
+              trace.marker.line.color[2] = "rgba(255, 230, 0, 1)";
+              trace.marker.line.width[2] = 3;
+              trace.pull[2] = 0.1;
+              trace.text[2] = "<b>VUS</b>";
+            } else if (score > 0.75 && score < 0.9) {
+              trace.marker.colors[3] = "rgba(255, 165, 0, 0.6)";
+              trace.marker.line.color[3] = "rgba(255, 165, 0, 1)";
+              trace.marker.line.width[3] = 3;
+              trace.pull[3] = 0.1;
+              trace.text[3] = "<b>LP</b>";
+            } else if (score >= 0.9) {
+              trace.marker.colors[4] = "rgba(255, 0, 0, 0.6)";
+              trace.marker.line.color[4] = "rgba(255, 0, 0, 1)";
+              trace.marker.line.width[4] = 3;
+              trace.pull[4] = 0.1;
+              trace.text[4] = "<b>P</b>";
+            }
+            break;
+          case "hybrid":
+            if (score <= 0.2) {
+              trace.marker.colors[0] = "rgba(154, 205, 50, 0.6)";
+              trace.marker.line.color[0] = "rgba(154, 205, 50, 1)";
+              trace.marker.line.width[0] = 3;
+              trace.pull[0] = 0.1;
+              trace.text[0] = "<b>B</b>";
+            } else if (score > 0.2 && score < 0.4) {
+              trace.marker.colors[1] = "rgba(144, 238, 144, 0.6)";
+              trace.marker.line.color[1] = "rgba(144, 238, 144, 1)";
+              trace.marker.line.width[1] = 3;
+              trace.pull[1] = 0.1;
+              trace.text[1] = "<b>LB</b>";
+            } else if (score >= 0.4 && score <= 0.6) {
+              trace.marker.colors[2] = "rgba(255, 230, 0, 0.6)";
+              trace.marker.line.color[2] = "rgba(255, 230, 0, 1)";
+              trace.marker.line.width[2] = 3;
+              trace.pull[2] = 0.1;
+              trace.text[2] = "<b>VUS</b>";
+            } else if (score > 0.6 && score < 0.8) {
+              trace.marker.colors[3] = "rgba(255, 165, 0, 0.6)";
+              trace.marker.line.color[3] = "rgba(255, 165, 0, 1)";
+              trace.marker.line.width[3] = 3;
+              trace.pull[3] = 0.1;
+              trace.text[3] = "<b>LP</b>";
+            } else if (score >= 0.8) {
+              trace.marker.colors[4] = "rgba(255, 0, 0, 0.6)";
+              trace.marker.line.color[4] = "rgba(255, 0, 0, 1)";
+              trace.marker.line.width[4] = 3;
+              trace.pull[4] = 0.1;
+              trace.text[4] = "<b>P</b>";
+            }
+            break;
+        }
+
+        return trace;
+      }
+
+      var trace = {
+        type: "pie",
+        showlegend: false,
+        hole: 0.4,
+        rotation: 90,
+        values: [100 / 5, 100 / 5, 100 / 5, 100 / 5, 100 / 5, 100],
+        direction: "clockwise",
+        textinfo: "text",
+        textposition: "inside",
+        labels: [
+          "Benign",
+          "Likely Benign",
+          "Uncertain Significance",
+          "Likely Pathogenic",
+          "Pathogenic",
+          " ",
+        ],
+        hoverinfo: "label",
+      };
+
+      const traceMarCNV = Object.assign(
+        { ...trace },
+        setColor("marcnv", parseFloat("{{ scores.marcnv }}")),
+      );
+
+      const traceISV = Object.assign(
+        { ...trace },
+        setColor("isv", parseFloat("{{ scores.isv }}")),
+      );
+
+      const traceHybrid = Object.assign(
+        { ...trace },
+        setColor("hybrid", parseFloat("{{ scores.hybrid }}")),
+      );
+
+      var degrees = 115,
+        radius = 0.6;
+      var radians = (degrees * Math.PI) / 180;
+      var x = -1 * radius * Math.cos(radians);
+      var y = radius * Math.sin(radians);
+
+      var layout = {
+        width: 150,
+        height: 150,
+        margin: { t: 1, b: 1, l: 1, r: 1 },
+        xaxis: { visible: false, range: [-1, 1] },
+        yaxis: { visible: false, range: [-1, 1] },
+      };
+
+      const config = {
+        displayModeBar: false,
+      };
+
+      Plotly.newPlot("marcnv", [traceMarCNV], layout, config);
+      Plotly.newPlot("isv", [traceISV], layout, config);
+      Plotly.newPlot("hybrid", [traceHybrid], layout, config);
+
+      var isv_shap = {{ isv_shap }};
+      Plotly.react("isv_shap", isv_shap);
+    </script>
+  </body>
+</html>

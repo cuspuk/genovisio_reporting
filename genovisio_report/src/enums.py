@@ -1,0 +1,14 @@
+import enum
+
+
+class Severity(enum.StrEnum):
+    BENIGN = "BENIGN"
+    LIKELY_BENIGN = "LIKELY BENIGN"
+    VARIANT_OF_UNCERTAIN_SIGNIFICANCE = "VARIANT OF UNCERTAIN SIGNIFICANCE"
+    LIKELY_PATHOGENIC = "LIKELY PATHOGENIC"
+    PATHOGENIC = "PATHOGENIC"
+
+
+class CNVType(enum.StrEnum):
+    LOSS = "loss"
+    GAIN = "gain"
