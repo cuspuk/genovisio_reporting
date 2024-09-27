@@ -1,4 +1,4 @@
-name: Test ISV package
+name: "Test package creation and running"
 
 on:
   push:
