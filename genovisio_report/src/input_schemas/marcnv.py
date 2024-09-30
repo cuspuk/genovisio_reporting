@@ -10,6 +10,7 @@ class MarcnvCriterion(pydantic.BaseModel):
     option: str
     score: float | None = None
     reason: list[str]
+    evidence: str
 
     @pydantic.field_validator("reason", mode="before")
     def reason_must_be_list(cls, v: str | list[str]) -> list[str]:
@@ -28,8 +29,12 @@ class MarcNV(pydantic.BaseModel):
         return sorted(v, key=lambda x: x.section)
 
     @pydantic.field_validator("severity", mode="before")
-    def check_VUS_severity(cls, v: str) -> enums.Severity:
-        if v == "VUS":
+    def handle_marcnv_severity(cls, v: str) -> enums.Severity:
+        # marcnv gives severity in lowercase
+        v = v.upper()
+
+        # handle special case of marcnv - "Uncertain"
+        if v == "UNCERTAIN":
             return enums.Severity.VARIANT_OF_UNCERTAIN_SIGNIFICANCE
         return enums.Severity(v)
 

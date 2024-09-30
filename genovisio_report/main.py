@@ -23,7 +23,7 @@ def render_template_html(
 
     marcnv_report = reports.MarcNVReport.build(marcnv_data)
     score_report = reports.ScoreReport.build(marcnv_data, isv_data, hybrid_data)
-    genes_report = reports.GenesReport.build(annot_data)
+    genes_report = reports.GenesReport.build(annot_data.genes)
     cnv_info = reports.CNVInfo.build(annot_data.cnv)
     shap_plot_json = reports.generate_plot_as_json(isv_data, annot_data)
 

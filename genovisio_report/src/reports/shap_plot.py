@@ -36,7 +36,7 @@ class ShapData:
     def color_label(self) -> str | None:
         m = re.search(r"(\[.+\] = )(.+)", _split_string(self.label))
         if m:
-            return f'<span style="color: gray;">{m.group(1)}</span>{m.group(2)}'
+            return f'<span style="color: gray">{m.group(1)}</span>{m.group(2)}'
         return None
 
     @property
