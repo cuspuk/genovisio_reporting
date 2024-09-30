@@ -35,6 +35,7 @@ def render_template_html(
         acmg=marcnv_report,
         isv_shap=shap_plot_json,
         genes=genes_report,
+        decimal_places=core.DECIMAL_PLACES,
     )
 
     return content
