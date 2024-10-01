@@ -8,7 +8,7 @@ from genovisio_report.src import core, input_schemas, reports
 
 
 def render_template_html(
-    annot_path: str, marcnv_path: str, isv_path: str, hybrid_path: str, report_id: str | None
+    cnv_path: str, annot_path: str, marcnv_path: str, isv_path: str, hybrid_path: str, report_id: str | None
 ) -> str:
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(core.TEMPLATES_DIR))
     template = env.get_template(core.TEMPLATE_FILENAME)
@@ -20,11 +20,12 @@ def render_template_html(
     hybrid_data = input_schemas.HybridData.construct_from_json_file(hybrid_path)
     annot_data = input_schemas.Annotation.construct_from_json_file(annot_path)
     isv_data = input_schemas.ISVResult.construct_from_json_file(isv_path)
+    cnv_region = input_schemas.CNVRegion.construct_from_json_file(cnv_path)
 
     marcnv_report = reports.MarcNVReport.build(marcnv_data)
     score_report = reports.ScoreReport.build(marcnv_data, isv_data, hybrid_data)
     genes_report = reports.GenesReport.build(annot_data.genes)
-    cnv_info = reports.CNVInfo.build(annot_data.cnv)
+    cnv_info = reports.CNVInfo.build(cnv_region)
     shap_plot_json = reports.generate_plot_as_json(isv_data, annot_data)
 
     content = template.render(
@@ -45,9 +46,16 @@ def render_template_html(
 
 
 def genovisio_report(
-    annotation_input: str, isv_input: str, marcnv_input: str, hybrid_input: str, output_html: str, report_id: str | None
+    cnv_input: str,
+    annotation_input: str,
+    isv_input: str,
+    marcnv_input: str,
+    hybrid_input: str,
+    output_html: str,
+    report_id: str | None,
 ) -> None:
     content = render_template_html(
+        cnv_path=cnv_input,
         annot_path=annotation_input,
         marcnv_path=marcnv_input,
         hybrid_path=hybrid_input,
@@ -72,11 +80,13 @@ def main() -> None:
     parser.add_argument("--annot", type=str, help="Path to the annotation file", required=True)
     parser.add_argument("--isv", type=str, help="Path to the ISV results", required=True)
     parser.add_argument("--marcnv", type=str, help="Path to the MarCNV results", required=True)
+    parser.add_argument("--cnv", type=str, help="Path to the CNV region", required=True)
     parser.add_argument("--hybrid", type=str, help="Path to the hybrid results", required=True)
     parser.add_argument("--out_html", type=str, help="Path to the output HTML", required=True)
 
     args = parser.parse_args()
     genovisio_report(
+        cnv_input=args.cnv,
         annotation_input=args.annot,
         isv_input=args.isv,
         marcnv_input=args.marcnv,

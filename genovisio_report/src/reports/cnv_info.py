@@ -9,7 +9,7 @@ class CNVInfo:
     pos: str
 
     @classmethod
-    def build(cls, cnv_data: input_schemas.AnnotationCNV) -> "CNVInfo":
+    def build(cls, cnv_data: input_schemas.CNVRegion) -> "CNVInfo":
         return cls(
             type=cnv_data.cnv_type.upper(),
             pos=f"{cnv_data.chrom_position}({cnv_data.chromosome}:{cnv_data.start}-{cnv_data.end})x{cnv_data.copy_number}",

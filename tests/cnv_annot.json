@@ -1,0 +1,12 @@
+{
+    "cnv":{
+        "chr": "chr15",
+        "start": 40000000,
+        "end": 41439352,
+        "cnv_type": "gain",
+        "cytobands": [
+            "q15.1"
+        ],
+        "cytobands_desc": "q15.1"
+    }
+}
