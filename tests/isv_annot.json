@@ -5,7 +5,7 @@
     "end": 41439352,
     "cnv_type": "gain",
     "length": 1439352,
-    "chrom_position": "bum"
+    "chrom_position": "PLACEHOLDER"
   },
   "isv_annot_values": {
     "gencode_genes": 80,

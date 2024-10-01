@@ -1,7 +1,12 @@
 <!doctype html>
 <html>
   <head>
+    {% if id != None %}
     <title>Report {{ id }}</title>
+    {% elif id == None %}
+    <title>CNV Report</title>
+    {% endif %}
+
     <link
       href="https://cdn.datatables.net/2.1.4/css/dataTables.dataTables.min.css"
       rel="stylesheet"
@@ -22,7 +27,11 @@
   <body>
     <div class="sheet-outer A4">
       <section class="sheet padding-5mm">
+        {% if id != None %}
         <h1 style="text-align: right">Report ID: {{ id }}</h1>
+        {% elif id == None %}
+        <h1 style="text-align: right">CNV Report</h1>
+        {% endif %}
 
         <table class="tb-cnv">
           {% include 'partials/cnv_info.html' %}
