@@ -2,21 +2,6 @@ import json
 
 import pydantic
 
-from genovisio_report.src import enums
-
-
-class AnnotationCNV(pydantic.BaseModel):
-    _id: str
-    chromosome: str = pydantic.Field(alias="chr")
-    start: int
-    end: int
-    cnv_type: enums.CNVType
-    chrom_position: str
-
-    @property
-    def copy_number(self) -> int:
-        return 1 if self.cnv_type == enums.CNVType.LOSS else 3
-
 
 class AnnotationCounters(pydantic.BaseModel):
     gencode_genes: int
@@ -29,7 +14,6 @@ class AnnotationCounters(pydantic.BaseModel):
     morbid_genes: int
     disease_associated_genes: int
     hi_genes: int
-    ts_genes: int = 0  # TODO must be added
     regions_HI: int
     regions_TS: int
     regulatory: int
@@ -58,7 +42,6 @@ class AnnotationReporting(pydantic.BaseModel):
 
 
 class Annotation(pydantic.BaseModel):
-    cnv: AnnotationCNV = pydantic.Field(alias="cnv")
     counters: AnnotationCounters = pydantic.Field(alias="isv_annot_values")
     genes: AnnotationReporting = pydantic.Field(alias="annotations_reporting")
 

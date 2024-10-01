@@ -1,12 +1,4 @@
 {
-  "cnv": {
-    "chr": "chr15",
-    "start": 40000000,
-    "end": 41439352,
-    "cnv_type": "gain",
-    "length": 1439352,
-    "chrom_position": "PLACEHOLDER"
-  },
   "isv_annot_values": {
     "gencode_genes": 80,
     "protein_coding": 39,
