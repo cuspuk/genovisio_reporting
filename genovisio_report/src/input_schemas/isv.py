@@ -16,7 +16,6 @@ class SHAPs(pydantic.BaseModel):
     morbid_genes: float
     disease_associated_genes: float
     hi_genes: float
-    ts_genes: float = 0.0
     regions_HI: float
     regions_TS: float
     regulatory: float

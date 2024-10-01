@@ -14,7 +14,6 @@ class AnnotationCounters(pydantic.BaseModel):
     morbid_genes: int
     disease_associated_genes: int
     hi_genes: int
-    ts_genes: int = 0  # TODO must be added
     regions_HI: int
     regions_TS: int
     regulatory: int

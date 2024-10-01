@@ -91,7 +91,6 @@ def generate_plot_as_json(isv: input_schemas.ISVResult, annotation: input_schema
         ),
         ShapData("Ribosomal RNA", isv.isv_shap_values.rrna, annotation.counters.rrna),
         ShapData("Small nuclear RNA", isv.isv_shap_values.snrna, annotation.counters.snrna),
-        ShapData("Triplosensitivity Genes", isv.isv_shap_values.ts_genes, annotation.counters.ts_genes),
     ]
 
     # sort data by name in reverse order
