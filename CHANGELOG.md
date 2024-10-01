@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.0...v0.3.1) (2024-10-01)
+
+
+### Bug Fixes
+
+* annot cnv gives chromosome instead of chr ([1a0efd0](https://github.com/cuspuk/genovisio_reporting/commit/1a0efd0351be9763d21563a3c772ce1836b9a1e6))
+
 ## [0.3.0](https://github.com/cuspuk/genovisio_reporting/compare/v0.2.0...v0.3.0) (2024-10-01)
 
 
