@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "genovisio_report"
-version = "0.1.0"
+version = "0.2.0"
 description = "Genovisio PDF/HTML reports generator"
 authors = ["Matej Hrnciar <matej.hrnciar@geneton.sk>"]
 readme = "README.md"
