@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/cuspuk/genovisio_reporting/compare/v0.2.0...v0.3.0) (2024-10-01)
+
+
+### Features
+
+* added cytogenetic location from separated cnv json ([e66d38d](https://github.com/cuspuk/genovisio_reporting/commit/e66d38df8e65d032c6cbbdf4f57e986461a96028))
+
+
+### Bug Fixes
+
+* removed redundant ts from shaps ([6dc1ee5](https://github.com/cuspuk/genovisio_reporting/commit/6dc1ee5429460931644f0b60616702df6675c769))
+
 ## [0.2.0](https://github.com/cuspuk/genovisio_reporting/compare/v0.1.0...v0.2.0) (2024-10-01)
 
 
