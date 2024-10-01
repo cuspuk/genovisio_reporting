@@ -6,7 +6,7 @@ from genovisio_report.src import enums
 
 
 class CNVRegion(pydantic.BaseModel):
-    chromosome: str = pydantic.Field(alias="chr")
+    chromosome: str
     start: int
     end: int
     cnv_type: enums.CNVType

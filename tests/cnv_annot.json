@@ -1,6 +1,6 @@
 {
     "cnv":{
-        "chr": "chr15",
+        "chromosome": "chr15",
         "start": 40000000,
         "end": 41439352,
         "cnv_type": "gain",
