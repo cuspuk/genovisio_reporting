@@ -21,22 +21,18 @@ class GeneReport:
 
 @dataclass
 class GenesReport:
-    protein_coding: GeneReport
+    protein_coding: int
     morbid: GeneReport
     disease: GeneReport
     hi: GeneReport
     ts: GeneReport
 
     @classmethod
-    def build(cls, annot_data: input_schemas.Annotation) -> "GenesReport":
+    def build(cls, annot: input_schemas.AnnotationReporting) -> "GenesReport":
         return cls(
-            protein_coding=GeneReport(
-                genes=annot_data.genes.protein_coding_genes, count=annot_data.counters.protein_coding
-            ),
-            morbid=GeneReport(genes=annot_data.genes.morbid_genes, count=annot_data.counters.morbid_genes),
-            disease=GeneReport(
-                genes=annot_data.genes.disease_associated_genes, count=annot_data.counters.disease_associated_genes
-            ),
-            hi=GeneReport(genes=annot_data.genes.hi_genes, count=annot_data.counters.hi_genes),
-            ts=GeneReport(genes=annot_data.genes.ts_genes, count=annot_data.counters.ts_genes),
+            protein_coding=annot.protein_coding_genes_count,
+            morbid=GeneReport(genes=annot.morbid_genes, count=annot.morbid_genes_count),
+            disease=GeneReport(genes=annot.disease_associated_genes, count=annot.disease_associated_genes_count),
+            hi=GeneReport(genes=annot.hi_genes, count=annot.hi_genes_count),
+            ts=GeneReport(genes=annot.ts_genes, count=annot.ts_genes_count),
         )

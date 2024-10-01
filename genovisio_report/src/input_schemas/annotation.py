@@ -7,7 +7,7 @@ from genovisio_report.src import enums
 
 class AnnotationCNV(pydantic.BaseModel):
     _id: str
-    chromosome: str
+    chromosome: str = pydantic.Field(alias="chr")
     start: int
     end: int
     cnv_type: enums.CNVType
@@ -46,11 +46,15 @@ class AnnotationCounters(pydantic.BaseModel):
 
 
 class AnnotationReporting(pydantic.BaseModel):
-    protein_coding_genes: list[str]
     morbid_genes: list[str] = pydantic.Field(alias="morbid_genes")
     disease_associated_genes: list[str] = pydantic.Field(alias="disease_associated_genes")
     hi_genes: list[str] = pydantic.Field(alias="HI_genes")
     ts_genes: list[str] = pydantic.Field(alias="TS_genes")
+    protein_coding_genes_count: int
+    hi_genes_count: int = pydantic.Field(alias="HI_genes_count")
+    ts_genes_count: int = pydantic.Field(alias="TS_genes_count")
+    morbid_genes_count: int
+    disease_associated_genes_count: int
 
 
 class Annotation(pydantic.BaseModel):

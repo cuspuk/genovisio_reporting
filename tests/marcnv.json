@@ -1,39 +1,41 @@
 {
   "criteria": [
-    {
-      "section": "1",
-      "option": "1A",
-      "score": 0.1,
-      "reason": "Contains protein-coding or other known functionally important elements"
-    },
-    {
-      "section": "2",
-      "option": "2A",
-      "score": 1.0,
-      "reason": "Complete overlap; the TS gene or minimal critical region is fully contained within the observed copy number gain"
-    },
-    {
-      "section": "3",
-      "option": "3C",
-      "score": 0.9,
-      "reason": "50 or more genes"
-    },
-    {
-      "section": "4",
-      "option": "Other",
-      "score": 0.5,
-      "reason": [
-        "No known fully overlapping population variant",
-        "No Benign Gains fully overlapping (including LB)",
-        "33 Pathogenic Gains fully contained (including LP)"
-      ]
-    },
-    {
-      "section": "5",
-      "option": "Other",
-      "reason": "No data available"
-    }
+      {
+          "section": "1",
+          "option": "1A",
+          "score": 0.0,
+          "reason": "The number of overlapping protein-coding genes (39) or enhancers (164) is more than zero.",
+          "evidence": "1A. Contains protein-coding or other known functionally important elements"
+      },
+      {
+          "section": "2",
+          "option": "2G",
+          "score": 0.0,
+          "reason": "Overlaps 3 established benign CNV, but contains additional protein coding genes. Benign CNVs:\nAccession number: gssvG12662, pubmedid: UNKNOWN. Overlap: 8872bp (0.6%).\nAccession number: gssvG12662, pubmedid: UNKNOWN. Overlap: 8872bp (0.6%).\nAccession number: gssvG12662, pubmedid: UNKNOWN. Overlap: 8872bp (0.6%).",
+          "evidence": "2G. Overlaps a benign copy number gain but includes additional genomic material"
+      },
+      {
+          "section": "3",
+          "option": "3B",
+          "score": 0.45,
+          "reason": "Overlaps 39 protein-coding genes.",
+          "evidence": "3B. 35-49 genes"
+      },
+      {
+          "section": "4",
+          "option": "4Skip",
+          "score": 0.0,
+          "reason": "Manual decision needed.",
+          "evidence": "Skip if there have been no reports associating either the copy number gain or any of the genes therein with human phenotypes caused by triplosensitivity"
+      },
+      {
+          "section": "5",
+          "option": "5F",
+          "score": 0.0,
+          "reason": "No family history is available.",
+          "evidence": "5F. Inheritance information is unavailable or uninformative."
+      }
   ],
-  "score": 0.5,
-  "severity": "VUS"
+  "score": 0.45,
+  "severity": "Uncertain"
 }

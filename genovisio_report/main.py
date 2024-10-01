@@ -23,7 +23,7 @@ def render_template_html(
 
     marcnv_report = reports.MarcNVReport.build(marcnv_data)
     score_report = reports.ScoreReport.build(marcnv_data, isv_data, hybrid_data)
-    genes_report = reports.GenesReport.build(annot_data)
+    genes_report = reports.GenesReport.build(annot_data.genes)
     cnv_info = reports.CNVInfo.build(annot_data.cnv)
     shap_plot_json = reports.generate_plot_as_json(isv_data, annot_data)
 
@@ -35,6 +35,10 @@ def render_template_html(
         acmg=marcnv_report,
         isv_shap=shap_plot_json,
         genes=genes_report,
+        marcnv_plot=reports.create_prediction_plot(marcnv_data.score, type="marcnv"),
+        isv_plot=reports.create_prediction_plot(isv_data.score, type="isv"),
+        hybrid_plot=reports.create_prediction_plot(hybrid_data.score, type="hybrid"),
+        decimal_places=core.DECIMAL_PLACES,
     )
 
     return content

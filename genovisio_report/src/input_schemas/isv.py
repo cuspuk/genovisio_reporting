@@ -5,7 +5,7 @@ import pydantic
 from genovisio_report.src import enums
 
 
-class SHAPValues(pydantic.BaseModel):
+class SHAPs(pydantic.BaseModel):
     gencode_genes: float
     protein_coding: float
     pseudogenes: float
@@ -36,7 +36,8 @@ class ISVResult(pydantic.BaseModel):
     prediction: float = pydantic.Field(alias="isv_prediction")
     score: float = pydantic.Field(alias="isv_score")
     classification: enums.Severity = pydantic.Field(alias="isv_classification")
-    isv_shap_values: SHAPValues = pydantic.Field(alias="isv_shap_values")
+    isv_shap_values: SHAPs = pydantic.Field(alias="isv_shap_values")
+    isv_shap_scores: SHAPs = pydantic.Field(alias="isv_shap_scores")
 
     @pydantic.field_validator("classification", mode="before")
     def classification_uppercase(cls, v: str) -> enums.Severity:
