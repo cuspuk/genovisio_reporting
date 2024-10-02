@@ -1,6 +1,6 @@
-import json
-
 import pydantic
+
+from genovisio_report.src import input_utils
 
 
 class AnnotationCounters(pydantic.BaseModel):
@@ -47,6 +47,4 @@ class Annotation(pydantic.BaseModel):
 
     @classmethod
     def construct_from_json_file(cls, path: str) -> "Annotation":
-        with open(path, "r") as f:
-            annotation_input = json.load(f)
-        return cls(**annotation_input)
+        return cls(**input_utils.load_json_from_path(path))

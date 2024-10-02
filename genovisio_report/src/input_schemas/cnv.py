@@ -1,8 +1,6 @@
-import json
-
 import pydantic
 
-from genovisio_report.src import enums
+from genovisio_report.src import enums, input_utils
 
 
 class CNVRegion(pydantic.BaseModel):
@@ -19,6 +17,4 @@ class CNVRegion(pydantic.BaseModel):
 
     @classmethod
     def construct_from_json_file(cls, path: str) -> "CNVRegion":
-        with open(path, "r") as f:
-            annotation_input = json.load(f)
-        return cls(**annotation_input["cnv"])
+        return cls(**input_utils.load_json_from_path(path)["cnv"])
