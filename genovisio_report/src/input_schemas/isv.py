@@ -38,6 +38,8 @@ class ISVResult(pydantic.BaseModel):
 
     @pydantic.field_validator("classification", mode="before")
     def classification_uppercase(cls, v: str) -> enums.Severity:
+        if v.upper() == "VOUS":
+            return enums.Severity.VARIANT_OF_UNCERTAIN_SIGNIFICANCE
         return enums.Severity(v.upper())
 
     @classmethod
