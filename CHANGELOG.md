@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.2...v0.3.3) (2024-10-02)
+
+
+### Bug Fixes
+
+* allow for gzipped jsons on input ([8804967](https://github.com/cuspuk/genovisio_reporting/commit/88049672de7c58d78ab3ea12cb804c5691171e84))
+
 ## [0.3.2](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.1...v0.3.2) (2024-10-02)
 
 
