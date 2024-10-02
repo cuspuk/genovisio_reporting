@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.3...v0.3.4) (2024-10-02)
+
+
+### Bug Fixes
+
+* fixed ISV VOUS enum ([8a227b8](https://github.com/cuspuk/genovisio_reporting/commit/8a227b8a298d781a014b4a7fb638892edda2d9fc))
+
 ## [0.3.3](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.2...v0.3.3) (2024-10-02)
 
 
