@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 import plotly.graph_objects as go
 
-from genovisio_report.src import input_schemas
+from genovisio_report.src import core, input_schemas
 
 
 def _split_string(s: str) -> str:
@@ -30,13 +30,13 @@ class ShapData:
 
     @property
     def label(self) -> str:
-        return f"[{self.value:.1f}] = {self.name}"
+        return f"[{self.value}] {self.name}"
 
     @property
     def color_label(self) -> str | None:
-        m = re.search(r"(\[.+\] = )(.+)", _split_string(self.label))
+        m = re.search(r"(\[.+\] )(.+)", _split_string(self.label))
         if m:
-            return f'<span style="color: gray">{m.group(1)}</span>{m.group(2)}'
+            return f'<span style="color: gray"><b>{m.group(1)}</b></span>{m.group(2)}'
         return None
 
     @property
@@ -50,7 +50,7 @@ class ShapData:
 
     @property
     def hovertext(self) -> str:
-        return f"<b><i>{self.name}</i></b><br><b>value:</b> {self.value}<br><b>SHAP value:</b> {self.shap}"
+        return f"<b><i>{self.name}</i></b><br><b>value:</b> {self.value}<br><b>SHAP value:</b> {core.float_format(self.shap)}"
 
 
 def generate_plot_as_json(isv: input_schemas.ISVResult, annotation: input_schemas.Annotation) -> str:
@@ -109,15 +109,15 @@ def generate_plot_as_json(isv: input_schemas.ISVResult, annotation: input_schema
         y=labels,
         orientation="h",
         marker=dict(color=colors),
-        text=shaps,
+        text=[core.float_format(shap) for shap in shaps],
         textposition="outside",
-        textfont=dict(size=7),
+        textfont=dict(size=9),
         hovertext=hovertexts,
         hoverinfo="text",
     )
 
     fig.add_vline(x=0, line_color="black", line_width=1)
-    fig.update_xaxes(tickfont=dict(size=7), range=[-1, 1])
-    fig.update_yaxes(tickfont=dict(size=7), tickmode="array", tickvals=labels, ticktext=color_labels)
+    fig.update_xaxes(tickfont=dict(size=9), range=[-1, 1])
+    fig.update_yaxes(tickfont=dict(size=9), tickmode="array", tickvals=labels, ticktext=color_labels)
     fig.update_layout(template="plotly_white", height=450, width=400, margin=dict(l=20, r=20, t=20, b=20))
     return fig.to_json()
