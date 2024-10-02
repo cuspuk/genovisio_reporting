@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.1...v0.3.2) (2024-10-02)
+
+
+### Bug Fixes
+
+* consistent formatting of floats to 2 decimals ([683db62](https://github.com/cuspuk/genovisio_reporting/commit/683db62a3e4db20e924774a7376b809cfa3758cc))
+
 ## [0.3.1](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.0...v0.3.1) (2024-10-01)
 
 
