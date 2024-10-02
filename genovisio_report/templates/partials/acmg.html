@@ -12,11 +12,11 @@
           {% if acmg.Section_1.score == None %}
           <div></div>
           {% elif acmg.Section_1.score > 0 %}
-          <div class="score-box pathogenic">{{ acmg.Section_1.score }}</div>
+          <div class="score-box pathogenic">{{ "%0.2f" | format(acmg.Section_1.score | float) }}</div>
           {% elif acmg.Section_1.score < 0 %}
-          <div class="score-box benign">{{ acmg.Section_1.score }}</div>
+          <div class="score-box benign">{{ "%0.2f" | format(acmg.Section_1.score | float) }}</div>
           {% else %}
-          <div class="score-box">{{ acmg.Section_1.score }}</div>
+          <div class="score-box">{{ "%0.2f" | format(acmg.Section_1.score | float) }}</div>
           {% endif %}
         </td>
       </tr>
@@ -37,11 +37,11 @@
           {% if acmg.Section_2.score == None %}
           <div></div>
           {% elif acmg.Section_2.score > 0 %}
-          <div class="score-box pathogenic">{{ acmg.Section_2.score }}</div>
+          <div class="score-box pathogenic">{{ "%0.2f" | format(acmg.Section_2.score | float) }}</div>
           {% elif acmg.Section_2.score < 0 %}
-          <div class="score-box benign">{{ acmg.Section_2.score }}</div>
+          <div class="score-box benign">{{ "%0.2f" | format(acmg.Section_2.score | float) }}</div>
           {% else %}
-          <div class="score-box">{{ acmg.Section_2.score }}</div>
+          <div class="score-box">{{ "%0.2f" | format(acmg.Section_2.score | float) }}</div>
           {% endif %}
         </td>
       </tr>
@@ -62,11 +62,11 @@
           {% if acmg.Section_3.score == None %}
           <div></div>
           {% elif acmg.Section_3.score > 0 %}
-          <div class="score-box pathogenic">{{ acmg.Section_3.score }}</div>
+          <div class="score-box pathogenic">{{ "%0.2f" | format(acmg.Section_3.score | float) }}</div>
           {% elif acmg.Section_3.score < 0 %}
-          <div class="score-box benign">{{ acmg.Section_3.score }}</div>
+          <div class="score-box benign">{{ "%0.2f" | format(acmg.Section_3.score | float) }}</div>
           {% else %}
-          <div class="score-box">{{ acmg.Section_3.score }}</div>
+          <div class="score-box">{{ "%0.2f" | format(acmg.Section_3.score | float) }}</div>
           {% endif %}
         </td>
       </tr>
@@ -87,11 +87,11 @@
           {% if acmg.Section_4.score == None %}
           <div></div>
           {% elif acmg.Section_4.score > 0 %}
-          <div class="score-box pathogenic">{{ acmg.Section_4.score }}</div>
+          <div class="score-box pathogenic">{{ "%0.2f" | format(acmg.Section_4.score | float) }}</div>
           {% elif acmg.Section_4.score < 0 %}
-          <div class="score-box benign">{{ acmg.Section_4.score }}</div>
+          <div class="score-box benign">{{ "%0.2f" | format(acmg.Section_4.score | float) }}</div>
           {% else %}
-          <div class="score-box">{{ acmg.Section_4.score }}</div>
+          <div class="score-box">{{ "%0.2f" | format(acmg.Section_4.score | float) }}</div>
           {% endif %}
         </td>
       </tr>
@@ -112,11 +112,11 @@
           {% if acmg.Section_5.score == None %}
           <div></div>
           {% elif acmg.Section_5.score > 0 %}
-          <div class="score-box pathogenic">{{ acmg.Section_5.score }}</div>
+          <div class="score-box pathogenic">{{ "%0.2f" | format(acmg.Section_5.score | float) }}</div>
           {% elif acmg.Section_5.score < 0 %}
-          <div class="score-box benign">{{ acmg.Section_5.score }}</div>
+          <div class="score-box benign">{{ "%0.2f" | format(acmg.Section_5.score | float) }}</div>
           {% else %}
-          <div class="score-box">{{ acmg.Section_5.score }}</div>
+          <div class="score-box">{{ "%0.2f" | format(acmg.Section_5.score | float) }}</div>
           {% endif %}
         </td>
       </tr>

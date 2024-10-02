@@ -99,11 +99,18 @@
       var marcnv_prediction = {{ marcnv_plot }};
       var isv_prediction = {{ isv_plot }};
       var hybrid_prediction = {{ hybrid_plot }};
-      Plotly.react("marcnv", marcnv_prediction, config);
-      Plotly.react("isv", isv_prediction, config);
-      Plotly.react("hybrid", hybrid_prediction, config);
+
+      marcnv_prediction["config"] = config;
+      isv_prediction["config"] = config;
+      hybrid_prediction["config"] = config;
+
+      Plotly.react("marcnv", marcnv_prediction);
+      Plotly.react("isv", isv_prediction);
+      Plotly.react("hybrid", hybrid_prediction);
 
       var isv_shap = {{ isv_shap }};
+      isv_shap["config"] = config;
+
       Plotly.react("isv_shap", isv_shap);
     </script>
   </body>
