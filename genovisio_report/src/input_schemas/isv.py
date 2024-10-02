@@ -1,8 +1,6 @@
-import json
-
 import pydantic
 
-from genovisio_report.src import enums
+from genovisio_report.src import enums, input_utils
 
 
 class SHAPs(pydantic.BaseModel):
@@ -44,6 +42,4 @@ class ISVResult(pydantic.BaseModel):
 
     @classmethod
     def construct_from_json_file(cls, path: str) -> "ISVResult":
-        with open(path, "r") as f:
-            isv_input = json.load(f)
-        return cls(**isv_input)
+        return cls(**input_utils.load_json_from_path(path))

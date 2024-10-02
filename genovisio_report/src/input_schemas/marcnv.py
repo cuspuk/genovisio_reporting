@@ -1,8 +1,6 @@
-import json
-
 import pydantic
 
-from genovisio_report.src import enums
+from genovisio_report.src import enums, input_utils
 
 
 class MarcnvCriterion(pydantic.BaseModel):
@@ -40,6 +38,4 @@ class MarcNV(pydantic.BaseModel):
 
     @classmethod
     def construct_from_json_file(cls, path: str) -> "MarcNV":
-        with open(path, "r") as f:
-            marcnv_input = json.load(f)
-        return cls(**marcnv_input)
+        return cls(**input_utils.load_json_from_path(path))
