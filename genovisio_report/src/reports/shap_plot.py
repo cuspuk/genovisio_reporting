@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 import plotly.graph_objects as go
 
-from genovisio_report.src import input_schemas
+from genovisio_report.src import core, input_schemas
 
 
 def _split_string(s: str) -> str:
@@ -30,7 +30,7 @@ class ShapData:
 
     @property
     def label(self) -> str:
-        return f"[{self.value:.0f}] {self.name}"
+        return f"[{self.value}] {self.name}"
 
     @property
     def color_label(self) -> str | None:
@@ -50,7 +50,7 @@ class ShapData:
 
     @property
     def hovertext(self) -> str:
-        return f"<b><i>{self.name}</i></b><br><b>value:</b> {self.value}<br><b>SHAP value:</b> {self.shap:.2f}"
+        return f"<b><i>{self.name}</i></b><br><b>value:</b> {self.value}<br><b>SHAP value:</b> {core.float_format(self.shap)}"
 
 
 def generate_plot_as_json(isv: input_schemas.ISVResult, annotation: input_schemas.Annotation) -> str:
@@ -109,7 +109,7 @@ def generate_plot_as_json(isv: input_schemas.ISVResult, annotation: input_schema
         y=labels,
         orientation="h",
         marker=dict(color=colors),
-        text=[f'{shap:.2f}' for shap in shaps],
+        text=[core.float_format(shap) for shap in shaps],
         textposition="outside",
         textfont=dict(size=9),
         hovertext=hovertexts,

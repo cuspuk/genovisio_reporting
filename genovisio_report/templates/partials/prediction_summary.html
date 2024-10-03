@@ -14,8 +14,12 @@
 
   <tr>
     <td></td>
-    <td>marCNV score: <b>{{ scores.marcnv | round(decimal_places) }}</b></td>
-    <td>ISV score: <b>{{ scores.isv | round(decimal_places) }}</b></td>
-    <td>Hybrid ISV score: <b>{{ scores.hybrid | round(decimal_places) }}</b></td>
+    <td>
+      marCNV score: <b>{{ float_format_string | format(scores.marcnv) }}</b>
+    </td>
+    <td>ISV score: <b>{{ float_format_string | format(scores.isv) }}</b></td>
+    <td>
+      Hybrid ISV score: <b>{{ float_format_string | format(scores.hybrid) }}</b>
+    </td>
   </tr>
 </tbody>

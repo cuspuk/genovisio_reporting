@@ -39,7 +39,7 @@ def render_template_html(
         marcnv_plot=reports.create_prediction_plot(marcnv_data.score),
         isv_plot=reports.create_prediction_plot(isv_data.score),
         hybrid_plot=reports.create_prediction_plot(hybrid_data.score),
-        decimal_places=core.DECIMAL_PLACES,
+        float_format_string=core.FLOAT_FORMAT_STRING,
     )
 
     return content
