@@ -53,47 +53,25 @@ def emphasize_trace(trace: dict[str, Any], index: int) -> dict[str, Any]:
     return trace
 
 
-def set_color(trace: dict[str, Any], score: float, type: str) -> dict[str, Any]:
+def set_color(trace: dict[str, Any], score: float) -> dict[str, Any]:
     # TODO this should not be inferred from classification severity level?
-    if type == "marcnv":
-        if score <= -0.9:
-            trace = emphasize_trace(trace, 0)
-        elif score > -0.9 and score < -0.5:
-            trace = emphasize_trace(trace, 1)
-        elif score >= -0.5 and score <= 0.5:
-            trace = emphasize_trace(trace, 2)
-        elif score > 0.5 and score < 0.9:
-            trace = emphasize_trace(trace, 3)
-        else:
-            trace = emphasize_trace(trace, 4)
-    elif type == "isv":
-        if score <= 0.1:
-            trace = emphasize_trace(trace, 0)
-        elif score > 0.1 and score < 0.25:
-            trace = emphasize_trace(trace, 1)
-        elif score >= 0.25 and score <= 0.75:
-            trace = emphasize_trace(trace, 2)
-        elif score > 0.75 and score < 0.9:
-            trace = emphasize_trace(trace, 3)
-        else:
-            trace = emphasize_trace(trace, 4)
-    elif type == "hybrid":
-        if score <= 0.2:
-            trace = emphasize_trace(trace, 0)
-        elif score > 0.2 and score < 0.4:
-            trace = emphasize_trace(trace, 1)
-        elif score >= 0.4 and score <= 0.6:
-            trace = emphasize_trace(trace, 2)
-        elif score > 0.6 and score < 0.8:
-            trace = emphasize_trace(trace, 3)
-        else:
-            trace = emphasize_trace(trace, 4)
+    if score <= -0.99:
+        trace = emphasize_trace(trace, 0)
+    elif score > -0.99 and score <= -0.9:
+        trace = emphasize_trace(trace, 1)
+    elif score >= -0.89 and score <= 0.89:
+        trace = emphasize_trace(trace, 2)
+    elif score >= 0.9 and score < 0.99:
+        trace = emphasize_trace(trace, 3)
+    else:
+        trace = emphasize_trace(trace, 4)
+
     return trace
 
 
-def create_prediction_plot(score: float, type: str) -> str:
+def create_prediction_plot(score: float) -> str:
     trace = get_base_trace()
-    trace = set_color(trace, score, type)
+    trace = set_color(trace, score)
     fig = go.Figure()
     fig.add_pie(
         values=[100 / 5, 100 / 5, 100 / 5, 100 / 5, 100 / 5, 100],

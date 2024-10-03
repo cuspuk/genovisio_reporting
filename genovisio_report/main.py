@@ -36,9 +36,9 @@ def render_template_html(
         acmg=marcnv_report,
         isv_shap=shap_plot_json,
         genes=genes_report,
-        marcnv_plot=reports.create_prediction_plot(marcnv_data.score, type="marcnv"),
-        isv_plot=reports.create_prediction_plot(isv_data.score, type="isv"),
-        hybrid_plot=reports.create_prediction_plot(hybrid_data.score, type="hybrid"),
+        marcnv_plot=reports.create_prediction_plot(marcnv_data.score),
+        isv_plot=reports.create_prediction_plot(isv_data.score),
+        hybrid_plot=reports.create_prediction_plot(hybrid_data.score),
         decimal_places=core.DECIMAL_PLACES,
     )
 
