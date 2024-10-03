@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.5](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.4...v0.3.5) (2024-10-03)
+
+
+### Bug Fixes
+
+* fixed classification boundaries in prediction plot ([ec66b63](https://github.com/cuspuk/genovisio_reporting/commit/ec66b63c0d97037742b00e4cf0bd1c8b8735d831))
+
 ## [0.3.4](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.3...v0.3.4) (2024-10-02)
 
 
