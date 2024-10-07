@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.5...v0.4.0) (2024-10-07)
+
+
+### Features
+
+* added displaying tool version in the report ([f2be6ec](https://github.com/cuspuk/genovisio_reporting/commit/f2be6ec5d60cdfa07d718b9395ce44c852b5978a))
+* added version and workflow version ([cee3f21](https://github.com/cuspuk/genovisio_reporting/commit/cee3f219ada402b30c9a02661d4185689acfc236))
+
 ## [0.3.5](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.4...v0.3.5) (2024-10-03)
 
 
