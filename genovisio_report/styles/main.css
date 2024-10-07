@@ -240,3 +240,10 @@ a:hover {
 a:visited {
   color: gray;
 }
+
+p.version {
+  position: relative;
+  top: -10mm;
+  color: gray;
+  font-size: smaller;
+}

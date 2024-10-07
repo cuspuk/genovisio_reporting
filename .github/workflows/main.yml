@@ -32,7 +32,7 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry run genovisio-report --annot tests/isv_annot.json --isv tests/isv.json --marcnv tests/marcnv.json --hybrid tests/hybrid.json --cnv tests/cnv_annot.json --out_html tests/test_output.html
+          poetry run genovisio-report --annot tests/isv_annot.json --isv tests/isv.json --marcnv tests/marcnv.json --hybrid tests/hybrid.json --cnv tests/cnv_annot.json --out_html tests/test_output.html --workflow_version 0.1.2
 
       - name: Compare outputs
         run: |
