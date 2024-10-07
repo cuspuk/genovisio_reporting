@@ -2,6 +2,16 @@ from typing import Any
 
 import plotly.graph_objects as go
 
+from genovisio_report.src import enums
+
+_mapping = {
+    enums.Severity.BENIGN: 0,
+    enums.Severity.LIKELY_BENIGN: 1,
+    enums.Severity.VARIANT_OF_UNCERTAIN_SIGNIFICANCE: 2,
+    enums.Severity.LIKELY_PATHOGENIC: 3,
+    enums.Severity.PATHOGENIC: 4,
+}
+
 
 def get_base_trace() -> dict[str, Any]:
     return {
@@ -53,25 +63,9 @@ def emphasize_trace(trace: dict[str, Any], index: int) -> dict[str, Any]:
     return trace
 
 
-def set_color(trace: dict[str, Any], score: float) -> dict[str, Any]:
-    # TODO this should not be inferred from classification severity level?
-    if score <= -0.99:
-        trace = emphasize_trace(trace, 0)
-    elif score > -0.99 and score <= -0.9:
-        trace = emphasize_trace(trace, 1)
-    elif score >= -0.89 and score <= 0.89:
-        trace = emphasize_trace(trace, 2)
-    elif score >= 0.9 and score < 0.99:
-        trace = emphasize_trace(trace, 3)
-    else:
-        trace = emphasize_trace(trace, 4)
-
-    return trace
-
-
-def create_prediction_plot(score: float) -> str:
+def create_prediction_plot(severity: enums.Severity) -> str:
     trace = get_base_trace()
-    trace = set_color(trace, score)
+    trace = emphasize_trace(trace, _mapping[severity])
     fig = go.Figure()
     fig.add_pie(
         values=[100 / 5, 100 / 5, 100 / 5, 100 / 5, 100 / 5, 100],
