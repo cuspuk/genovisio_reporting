@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/cuspuk/genovisio_reporting/compare/v0.4.0...v0.5.0) (2024-10-07)
+
+
+### Features
+
+* input severity is used for prediction plots ([df3f60b](https://github.com/cuspuk/genovisio_reporting/commit/df3f60b306f3918124e2170bdc69798de8f31f44))
+
 ## [0.4.0](https://github.com/cuspuk/genovisio_reporting/compare/v0.3.5...v0.4.0) (2024-10-07)
 
 
